@@ -53,10 +53,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
 
-        print "{"
-        print " name: 'devon',"
-        print " last: 'dapuzzo'"
-        print "}"
+        print "{name: 'devon', last: 'dapuzzo'}"
         # print "<h3>New get request kinda working...</h3>"
         # try:
         #         con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
