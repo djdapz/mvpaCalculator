@@ -57,7 +57,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         print "<h3>testing the bash script.</h3>"
         try:
-                print "<p>getting buckets...<p>"
+                print "<p>entering getBuckets()...<p>"
                 buckets = bucketLib.getBuckets()
                 print "<p>got buckets...<p>"
                 buckets[0].printTableHeader()

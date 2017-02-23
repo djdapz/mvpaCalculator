@@ -60,6 +60,7 @@ class Bucket:
 
 
 def getBuckets(uid = "Fahad"):
+    print "<p>in getBuckets()...<p>"
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
