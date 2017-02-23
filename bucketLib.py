@@ -96,22 +96,10 @@ def getBuckets(uid = "Fahad"):
         print "<p>starting on row "+str(rowcounter) + "...</p><ul>"
 
         #map to row
-        #make sure data is in format
-
-        print "<li>stripping 1</li>"
-        print row[1]
-        row[1] = str(row[1]).strip()
-
-        print "<li>stripped 1</li>"
-        row[2] = str(row[2]).strip()
-
-        print "<li>stripped 2</li>"
-        row[3] = str(row[3]).strip()
-        print "<li>stripped all</li>"
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
-
+        print "<li> got start interval</li>"
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
-
+        print "<li> got end interval</li>"
         start_bucket = datetimeToBucketNumber(start_time, end_time, interval, start_interval)
         end_bucket = datetimeToBucketNumber(start_time, end_time, interval, end_interval)
 
