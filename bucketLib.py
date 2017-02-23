@@ -61,15 +61,12 @@ class Bucket:
 
 
 def getBuckets(uid = "Fahad"):
-    print "<p>in getBuckets()...</p>"
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
     #todo get uid
     cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
     rows = cur.fetchall()
-
-    print "<p>got rows...</p>"
 
 
     now = datetime.now()
@@ -87,14 +84,10 @@ def getBuckets(uid = "Fahad"):
     buckets = []
 
     iterating_time = start_time
-    print "<p>making buckets...</p>"
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
-    rowcounter = 0
     for row in rows:
-        rowcounter = rowcounter + 1
-        print "<p>starting on row "+str(rowcounter) + "...</p><ul>"
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
@@ -107,7 +100,6 @@ def getBuckets(uid = "Fahad"):
 
         #handle calories
         if row[3] == 'calories' or row[3] =='steps':
-            print "<li> row type = "+ row[3]+" </li>"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
@@ -140,7 +132,6 @@ def getBuckets(uid = "Fahad"):
 
         elif row[3] == 'max':
 
-            print "<li> row type = "+ row[3]+" </li>"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -167,7 +158,6 @@ def getBuckets(uid = "Fahad"):
 
         elif row[3] == 'min':
 
-            print "<li> row type = "+ row[3]+" </li>"
             # Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -195,20 +185,17 @@ def getBuckets(uid = "Fahad"):
 
         elif row[3] == 'average':
 
-            print "<li> row type = "+ row[3]+" </li>"
             # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
             # TODO - consider case that nothing is there
             key = row[3]
             value = row[4]
 
             if (start_bucket == end_bucket):
-                print "<li> start == end </li>"
                 # if they're in the same bucket we have to average
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
 
             else:
 
-                print "<li> start !== end </li>"
 
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, buckets[start_bucket].end_time)
                 setAverageBucketValue(buckets, interval, end_bucket, key, value, buckets[end_bucket].start_time, end_interval)
@@ -221,7 +208,6 @@ def getBuckets(uid = "Fahad"):
 
         else:
             print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
-        print "</ul>"
     return buckets
 
 
@@ -255,13 +241,8 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     #note start and end time are for the times IN THE BUCKET
 
 
-    print "<li> setting avg </li>"
-
     bucket_start = buckets[bucketNumber].start_time
     bucket_end = buckets[bucketNumber].end_time
-
-    print "<li> got start and end </li>"
-
 
     if(start_time < bucket_start or end_time > bucket_end):
         print "ERR in setAverageBucketValue      start_time:" + str(start_time) + "    end_time: " +str(end_time) + "     bucketNumber"
@@ -277,21 +258,14 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     elif (end_time == bucket_end):
         percentage = float((bucket_end - start_time).seconds) / float(interval * 60)
 
-
-    print "<li> made it through all cases </li>"
-    print "<li> start time - "+str(start_time)+" </li>"
-    print "<li> end time - "+str(end_time)+" </li>"
-    print "<li> interval - "+str(interval)+" </li>"
     percentage = float((end_time - start_time).seconds) / float(interval * 60)
 
 
     current_avg = buckets[bucketNumber].heart_rate
-    print "<li> percentage - "+str(percentage)+" </li>"
 
     if (current_avg):
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
     else:
         new_avg = value
-    print "<li> ready to set value </li>"
 
     buckets[bucketNumber].heart_rate = value
