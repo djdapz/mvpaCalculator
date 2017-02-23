@@ -72,9 +72,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
                         print "made it"
                         print "|"+str(row[1])+"|"
-                        start_interval = datetime.strptime(str(row[1]), '%I:%M:%S %p %b, %d %Y')
+                        start_interval = datetime.strptime(str(row[1]), '%I:%M:%S %p %b %d, %Y')
                         print "something"
-                        end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b, %d %Y')
+                        end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
                         #for i in [1,2]:
 
                         print "made allit"
