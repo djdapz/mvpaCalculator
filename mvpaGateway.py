@@ -69,10 +69,14 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
                 for row in rows:
                         print "<tr>"
+
+                        print "made it"
                         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
                         print "something"
                         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b, %d %Y')
                         #for i in [1,2]:
+
+                        print "made allit"
                         print "<td>"
                         #print str(start_interval.month)  +', ' + str(start_interval.day) +' ' + str(start_interval.year)
                         #print "</td>"
