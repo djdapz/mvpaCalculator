@@ -68,9 +68,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
                 for row in rows:
                         print "<tr>"
-                        for col in row:
+                        for i in [1,2]:
                                 print "<td>"
-                                print col
+                                print col[i]
                                 print "</td>"
 
                         print "</tr>"
