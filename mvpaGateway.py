@@ -97,6 +97,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             interval = buckets[0].getInterval()
 
             if mode == "table":
+                print "<h3>MVPA TABLE</h3>"
                 print "<table>"
             buckets[0].printHeader(mode)
             step_sum = 0
