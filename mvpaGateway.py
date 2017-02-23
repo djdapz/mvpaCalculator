@@ -61,7 +61,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<p>entering getBuckets()...<p>"
                 buckets = bucketLib.getBuckets()
                 print "<p>got buckets...<p>"
-                print "<table>"
+                #print "<table>"
                 buckets[0].printTableHeader()
                 step_sum = 0
                 calories_sum = 0
@@ -69,8 +69,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     if bucket.steps:
                         step_sum += bucket.steps
                     # calories_sum = bucket.calories + calories_sum
-                    bucket.printTableRow()
-                print "</table>"
+                    #bucket.printTableRow()
+                #print "</table>"
 
                 # print "<h2>calories sum: " + calories_sum + "</h2>"
                 print "<h2>step_sum : " + step_sum + "</h2>"
