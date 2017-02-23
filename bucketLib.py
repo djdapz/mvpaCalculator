@@ -24,6 +24,39 @@ class Bucket:
     def getInterval(self):
         return  (self.end_time - self.start_time).seconds / 60 #in minutes
 
+    def printCsvRow(self):
+        print "<p>"
+
+        print str(self.start_time.month) + '/' + str(self.start_time.day) + '     ' + str(
+            self.start_time.hour) + ":" + str(self.start_time.minute)
+        print ", "
+
+        print str(self.end_time.month) + '/' + str(self.end_time.day) + '     ' + str(self.end_time.hour) + ":" + str(
+            self.end_time.minute)
+        print ", "
+
+        print str(self.heart_rate)
+        print ", "
+
+        print str(self.hr_max)
+        print ", "
+
+        print str(self.hr_min)
+        print ", "
+
+        print str(self.steps)
+        print ", "
+
+        print str(self.calories)
+        print ", "
+
+        print str(self.mvpa_guess)
+
+        print "</p>"
+
+    def printCsvHeader(self):
+        print "<p>start_time, end_time, hr, hr_max, hr_min, steps, calories, guessed_mvpa</p>"
+
     def printTableRow(self):
         print "<tr>"
 
