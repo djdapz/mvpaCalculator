@@ -71,19 +71,20 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         print "<tr>"
 
                         start_interval = datetime_object = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
-                        end_interval = datetime_object = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
+                        end_interval = datetime_object = datetime.strptime(row[2], '%I:%M:%S %p %b, %d %Y')
                         #for i in [1,2]:
                         print "<td>"
-                        print str(start_interval.month)  +', ' + str(start_interval.day) +' ' + str(start_interval.year)
-                        print "</td>"
-                        print "<td>"
-                        print str(end_interval.month)  +', ' + str(end_interval.day) +' ' + str(end_interval.year)
-                        print "</td>"
+                        #print str(start_interval.month)  +', ' + str(start_interval.day) +' ' + str(start_interval.year)
+                        #print "</td>"
+                        #print "<td>"
+                        #print str(end_interval.month)  +', ' + str(end_interval.day) +' ' + str(end_interval.year)
+                        #print "</td>"
 
                         #print "</tr>"
                 print "</table>"
 
 
+                print "made it"
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
                 sys.exit(1)
