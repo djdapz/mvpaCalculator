@@ -24,11 +24,11 @@ class Bucket:
         print "<tr>"
 
         print "<td>"
-        print str(self.start_time)
+        print str(self.start_time.day)+ '  ' + str(self.start_time.hour) + ":" + str(self.start_time.minute)
         print "</td>"
 
         print "<td>"
-        print str(self.end_time)
+        print str(self.end_time.day)+ '  ' + str(self.end_time.hour) + ":" + str(self.end_time.minute)
         print "</td>"
 
         print "<td>"
