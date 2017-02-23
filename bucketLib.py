@@ -228,7 +228,6 @@ def getBuckets(uid = "Fahad"):
 
             if (start_bucket == end_bucket):
 
-                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 insertMin(buckets, value, end_bucket)
 
 
@@ -256,6 +255,8 @@ def getBuckets(uid = "Fahad"):
             value = row[4]
 
             if (start_bucket == end_bucket):
+
+                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 # if they're in the same bucket we have to average
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
 
