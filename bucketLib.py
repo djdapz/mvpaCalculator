@@ -145,6 +145,7 @@ def buildOutMissingValues(buckets):
         else:
             print "diff start"
             diff = bucket.heart_rate - last_hr
+            print "diff end"
             last_hr -= diff
             bucket.heart_rate = last_hr
         print "heart rate"
