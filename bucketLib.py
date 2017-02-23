@@ -1,3 +1,5 @@
+# created by Devon D'Apuzzo
+
 import MySQLdb as mdb
 import sys
 import cgi
@@ -120,6 +122,40 @@ def labelBuckets(buckets):
             bucket.mvpa_guess = True
         elif bucket.heart_rate and bucket.heart_rate > hr_threshold:
             bucket.mvpa_guess = True
+
+def buildOutMissingValues(buckets):
+    base_calories_per_minute = 6.08333 / 5
+    interval = buckets[0].getInterval()
+
+    last_max = 0
+    last_min = 0
+    last_hr = 0
+
+    for bucket in buckets:
+        if bucket.steps == None:
+            bucket.steps = 0
+
+        if bucket.calories == None:
+            bucket.calories = base_calories_per_minute * interval
+
+        if bucket.heart_rate:
+            last_hr = bucket.heart_rate
+        else:
+            bucket.heart_rate = last_hr
+
+        if bucket.last_max:
+            last_max = bucket.hr_max
+        else:
+            bucket.heart_rate = last_max
+
+
+        if bucket.last_min:
+            last_min = bucket.hr_min
+        else:
+            bucket.hr_min = last_min
+
+
+
 
 
 

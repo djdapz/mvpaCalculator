@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# created by Devon D'Apuzzo
 
 import MySQLdb as mdb
 import sys
@@ -58,7 +59,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         try:
                 buckets = bucketLib.getBuckets()
                 bucketLib.labelBuckets(buckets)
+                bucketLib.buildOutMissingValues(buckets)
                 interval = buckets[0].getInterval()
+
 
                 print "<table>"
                 buckets[0].printTableHeader()
