@@ -201,10 +201,13 @@ def getBuckets(uid = "Fahad"):
             value = row[4]
 
             if (start_bucket == end_bucket):
+                print "<li> start == end </li>"
                 # if they're in the same bucket we have to average
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
 
             else:
+
+                print "<li> start !== end </li>"
 
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, buckets[start_bucket].end_time)
                 setAverageBucketValue(buckets, interval, end_bucket, key, value, buckets[end_bucket].start_time, end_interval)
