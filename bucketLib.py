@@ -68,27 +68,27 @@ class Bucket:
 
             print (str(self.start_time.month) + '/' + str(self.start_time.day) + '     ' + str(
                 self.start_time.hour) + ":" + str(self.start_time.minute)).strip()
-            print ", "
+            print ","
 
             print (
             str(self.end_time.month) + '/' + str(self.end_time.day) + '     ' + str(self.end_time.hour) + ":" + str(
                 self.end_time.minute)).strip()
-            print ", "
+            print ","
 
             print str(self.heart_rate).strip()
-            print ", "
+            print ","
 
             print str(self.hr_max).strip()
-            print ", "
+            print ","
 
             print str(self.hr_min).strip()
-            print ", "
+            print ","
 
             print str(self.steps).strip()
-            print ", "
+            print ","
 
             print str(self.calories).strip()
-            print ", "
+            print ","
 
             print str(self.mvpa_guess).strip()
 
