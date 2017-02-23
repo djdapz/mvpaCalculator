@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bucketLib.py" afterPath="$PROJECT_DIR$/bucketLib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests.py" afterPath="$PROJECT_DIR$/tests.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding>
-                <element signature="e#23#33#0" expanded="true" />
-                <marker date="1487841878000" expanded="true" signature="1436:1492" ph="select disti... raw_fit" />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1487841984000" expanded="true" signature="1472:1525" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -89,6 +87,7 @@
       <find>max_hr</find>
       <find>min_hr</find>
       <find>days</find>
+      <find>g</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -504,11 +503,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
-            <element signature="e#23#33#0" expanded="true" />
-            <marker date="1487841878000" expanded="true" signature="1436:1492" ph="select disti... raw_fit" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1487841984000" expanded="true" signature="1472:1525" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-#import MySQLdb as mdb
+import MySQLdb as mdb
 import sys
 import cgi
 import cgitb
@@ -61,16 +61,14 @@ class Bucket:
 
 
 def getBuckets(uid = "Fahad"):
+    print "<p>in getBuckets()...</p>"
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
-    # todo get uid
-    cur.execute("select distinct * from raw_fit where uid = '" + uid + "'")
+    #todo get uid
+    cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
     rows = cur.fetchall()
 
-
-
-    print "<p>in getBuckets()...</p>"
     print "<p>got rows...</p>"
 
 
@@ -97,7 +95,6 @@ def getBuckets(uid = "Fahad"):
     for row in rows:
         rowcounter = rowcounter + 1
         print "<p>starting on row "+str(rowcounter) + "...</p><ul>"
-
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
