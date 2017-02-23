@@ -254,8 +254,12 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     #note start and end time are for the times IN THE BUCKET
 
 
+    print "<li> setting avg </li>"
+
     bucket_start = buckets[bucketNumber].start_time
     bucket_end = buckets[bucketNumber].end_time
+
+    print "<li> got start and end </li>"
 
 
     if(start_time < bucket_start or end_time > bucket_end):
@@ -273,7 +277,7 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
         percentage = float((bucket_end - start_time).seconds) / float(interval * 60)
 
 
-
+    print "<li> made it through cases </li>"
     percentage = float((start_time - end_time).seconds) / float(interval * 60)
     current_avg = buckets[bucketNumber].average
 
