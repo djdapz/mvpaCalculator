@@ -194,7 +194,6 @@ def getBuckets(uid = "Fahad"):
 
 
         elif row[3] == 'max':
-            print "max encountred"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -202,7 +201,9 @@ def getBuckets(uid = "Fahad"):
 
             if (start_bucket == end_bucket):
                 # if they're in the same bucket we can just make it the max
+                print '  start=end'
                 setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
+
 
             else:
                 percentageOfStart = float((buckets[start_bucket].end_time - start_interval).seconds) / float((end_interval - start_interval).seconds)
