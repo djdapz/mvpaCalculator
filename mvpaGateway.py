@@ -57,11 +57,12 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         print "<h3>testing the bash script.</h3>"
         try:
+                print "<p>getting buckets...<p>"
                 buckets = bucketLib.getBuckets()
+                print "<p>got buckets...<p>"
                 buckets[0].printTableHeader()
                 for bucket in buckets:
                     bucket.printTableRow()
-
 
 
         except mdb.Error, e:
