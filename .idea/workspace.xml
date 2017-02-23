@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvpaGateway.py" afterPath="$PROJECT_DIR$/mvpaGateway.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +23,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+            <state relative-caret-position="312">
+              <caret line="69" column="41" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
               <folding>
                 <element signature="e#19#40#0" expanded="true" />
-                <marker date="1487842723000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487842767000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -504,11 +503,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="73" column="51" lean-forward="false" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        <state relative-caret-position="312">
+          <caret line="69" column="41" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
           <folding>
             <element signature="e#19#40#0" expanded="true" />
-            <marker date="1487842723000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487842767000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>
