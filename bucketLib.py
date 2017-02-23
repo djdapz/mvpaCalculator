@@ -86,13 +86,13 @@ def getBuckets(uid = "Fahad"):
     buckets = []
 
     iterating_time = start_time
-
+    print "<p>making buckets...<\p>"
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
 
     for row in rows:
-            print "<p>iterating<\p>"
+
             #map to row
             #make sure data is in format
             row[0] = row[0].strip()
