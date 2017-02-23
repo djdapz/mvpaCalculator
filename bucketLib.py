@@ -106,6 +106,7 @@ def getBuckets(uid = "Fahad"):
 
         #handle calories
         if row[3] == 'calories' or row[3] =='steps':
+            print "<li> row type = "+ row[3]+" </li>"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
@@ -137,6 +138,8 @@ def getBuckets(uid = "Fahad"):
 
 
         elif row[3] == 'max':
+
+            print "<li> row type = "+ row[3]+" </li>"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -162,6 +165,8 @@ def getBuckets(uid = "Fahad"):
                         setattr(buckets[i], key, max(buckets[i].hr_max, value))
 
         elif row[3] == 'min':
+
+            print "<li> row type = "+ row[3]+" </li>"
             # Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -188,6 +193,8 @@ def getBuckets(uid = "Fahad"):
                         insertMin(buckets, value, i)
 
         elif row[3] == 'average':
+
+            print "<li> row type = "+ row[3]+" </li>"
             # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
             # TODO - consider case that nothing is there
             key = row[3]
