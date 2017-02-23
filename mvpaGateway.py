@@ -52,33 +52,34 @@ if os.environ['REQUEST_METHOD'] == 'POST':
 elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
+        print "<h3>New get request kinda working...</h3>"
+        try:
+                con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
+                cur = con.cursor()
 
-        print "{name: 'devon', last: 'dapuzzo'}"
-        # print "<h3>New get request kinda working...</h3>"
-        # try:
-        #         con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
-        #         cur = con.cursor()
-        #         cur.execute("select * from djd ORDER BY time DESC LIMIT 60")
-        #         rows = cur.fetchall()
-        #
-        #
-        #         # Display the data in a table
-        #         print "<table border='1'>"
-        #         print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
-        #         for row in rows:
-        #                 print "<tr>"
-        #                 for col in row:
-        #                         print "<td>"
-        #                         print col
-        #                         print "</td>"
-        #
-        #                 print "</tr>"
-        #         print "</table>"
-        #
-        #
-        # except mdb.Error, e:
-        #         print "Error %d = %s<p>" % (e.args[0],e.args[1])
-        #         sys.exit(1)
+                #todo get uid
+                uid = 'Fahad'
+                cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
+                rows = cur.fetchall()
+
+
+                # Display the data in a table
+                print "<table border='1'>"
+                print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
+                for row in rows:
+                        print "<tr>"
+                        for col in row:
+                                print "<td>"
+                                print col
+                                print "</td>"
+
+                        print "</tr>"
+                print "</table>"
+
+
+        except mdb.Error, e:
+                print "Error %d = %s<p>" % (e.args[0],e.args[1])
+                sys.exit(1)
         #
         # finally:
         if con:
