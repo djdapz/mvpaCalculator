@@ -6,6 +6,8 @@ import cgi
 import cgitb
 import os
 from datetime import datetime
+from datetime import timedelta
+import bucketLib
 
 #
 # Good grief, we have to generate our own headers?  Crazy.
@@ -55,34 +57,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         print "<h3>testing the bash script.</h3>"
         try:
-                con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
-                cur = con.cursor()
-
-                #todo get uid
-                uid = 'Fahad'
-                cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
-                rows = cur.fetchall()
-
-
-                # Display the data in a table
-                print "<table border='1'>"
-                print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
-                for row in rows:
-                        print "<tr>"
-
-                        start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
-
-                        end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
-                        #for i in [1,2]:
-                        print "<td>"
-                        print str(start_interval.hour)  +':' + str(start_interval.minute) +':' + str(start_interval.second) + "    " + row[1]
-                        print "</td>"
-                        print "<td>"
-                        print str(end_interval.hour)  +':' + str(end_interval.minute) +':' + str(end_interval.second)+ "    " + row[2]
-                        print "</td>"
-
-                        #print "</tr>"
-                print "</table>"
+                buckets = bucketLib.getBuckets()
+                buckets[0].printTableHeader()
+                for bucket in buckets:
+                    bucket.printTableRow()
 
 
 
