@@ -158,11 +158,16 @@ def buildOutMissingValues(buckets):
             bucket.heart_rate = last_max
 
 
+        print "max done"
+
+
         if bucket.last_min:
             last_min = bucket.hr_min
         else:
             bucket.hr_min = last_min
 
+
+        print "min done"
 
 
 
