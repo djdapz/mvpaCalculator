@@ -58,8 +58,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         try:
                 buckets = bucketLib.getBuckets()
-                bucketLib.labelBuckets(buckets)
                 bucketLib.buildOutMissingValues(buckets)
+                bucketLib.labelBuckets(buckets)
                 interval = buckets[0].getInterval()
 
 
