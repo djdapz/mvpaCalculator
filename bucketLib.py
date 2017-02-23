@@ -97,9 +97,7 @@ def getBuckets(uid = "Fahad"):
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
-        print "<li> got start interval</li>"
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
-        print "<li> got end interval</li>"
         start_bucket = datetimeToBucketNumber(start_time, end_time, interval, start_interval)
         end_bucket = datetimeToBucketNumber(start_time, end_time, interval, end_interval)
 
@@ -212,7 +210,7 @@ def getBuckets(uid = "Fahad"):
 
         else:
             print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
-
+        print "</ul>"
     return buckets
 
 
