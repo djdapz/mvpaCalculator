@@ -60,7 +60,7 @@ class Bucket:
 
 
 def getBuckets(uid = "Fahad"):
-    print "<p>in getBuckets()...<p>"
+    print "<p>in getBuckets()...</p>"
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
@@ -68,7 +68,7 @@ def getBuckets(uid = "Fahad"):
     cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
     rows = cur.fetchall()
 
-    print "<p>got rows...<p>"
+    print "<p>got rows...</p>"
 
 
     now = datetime.now()
@@ -86,135 +86,136 @@ def getBuckets(uid = "Fahad"):
     buckets = []
 
     iterating_time = start_time
-    print "<p>making buckets...<\p>"
+    print "<p>making buckets...</p>"
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
 
     for row in rows:
+        print "<p>iterating buckets...</p>"
 
-            #map to row
-            #make sure data is in format
-            row[0] = row[0].strip()
-            row[1] = row[1].strip()
-            row[2] = row[2].strip()
-            row[3] = row[3].strip()
-            start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
+        #map to row
+        #make sure data is in format
+        row[0] = row[0].strip()
+        row[1] = row[1].strip()
+        row[2] = row[2].strip()
+        row[3] = row[3].strip()
+        start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
 
-            end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
+        end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
 
-            start_bucket = datetimeToBucketNumber(start_time, end_time, interval, start_interval)
-            end_bucket = datetimeToBucketNumber(start_time, end_time, interval, end_interval)
+        start_bucket = datetimeToBucketNumber(start_time, end_time, interval, start_interval)
+        end_bucket = datetimeToBucketNumber(start_time, end_time, interval, end_interval)
 
-            if start_bucket == -1 or end_bucket == -1:
-                continue
+        if start_bucket == -1 or end_bucket == -1:
+            continue
 
-            #handle calories
-            if row[3] == 'calories' or row[3] =='steps':
-                # for steps and calories it makes sense to map percentages of the attribute to each bucket
-                key = row[3]
-                value = row[4]
+        #handle calories
+        if row[3] == 'calories' or row[3] =='steps':
+            # for steps and calories it makes sense to map percentages of the attribute to each bucket
+            key = row[3]
+            value = row[4]
 
-                if(start_bucket == end_bucket):
-                    #if they're in the same bucket we can just increment
-                    incrementBucket(buckets, value, start_bucket, key)
+            if(start_bucket == end_bucket):
+                #if they're in the same bucket we can just increment
+                incrementBucket(buckets, value, start_bucket, key)
 
-                elif end_bucket - start_bucket == 1:
-                    totalSeconds = float((end_interval - start_interval).seconds)
-                    percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
-                    percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
+            elif end_bucket - start_bucket == 1:
+                totalSeconds = float((end_interval - start_interval).seconds)
+                percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
+                percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
 
-                    incrementBucket(buckets, value*percentageStart, start_bucket, key)
-                    incrementBucket(buckets, value*percentageEnd, end_bucket, key)
-                else:
-
-
-                    totalSeconds = (end_interval - start_interval).seconds
-                    startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
-                    endSeconds= (end_interval - buckets[start_bucket].start_time).seconds
-
-                    middleBuckets = (end_bucket - start_bucket) * interval * 60
-
-                    incrementBucket(buckets, value * startSeconds / totalSeconds, start_bucket, key)
-                    incrementBucket(buckets, value * endSeconds / totalSeconds, end_bucket, key)
-                    for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
-                        incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
+                incrementBucket(buckets, value*percentageStart, start_bucket, key)
+                incrementBucket(buckets, value*percentageEnd, end_bucket, key)
+            else:
 
 
-            elif row[3] == 'max':
-                #Max from an interval will become the maximum for any bucket that it is at least HALF in
-                #TODO - consider case that nothing is there
-                key = row[3]
-                value = row[4]
+                totalSeconds = (end_interval - start_interval).seconds
+                startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
+                endSeconds= (end_interval - buckets[start_bucket].start_time).seconds
 
-                if (start_bucket == end_bucket):
-                    # if they're in the same bucket we can just make it the max
-                    setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
+                middleBuckets = (end_bucket - start_bucket) * interval * 60
 
-                else:
-                    percentageOfStart = float((buckets[start_bucket].end_time - start_interval).seconds) / float((end_interval - start_interval).seconds)
-                    percentageOfEnd = float((end_interval - buckets[end_bucket].start_time).seconds) / float((end_interval - start_interval).seconds)
-
-                    if percentageOfStart > .5:
-                        setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max, value))
-
-                    if percentageOfEnd > .5:
-                        setattr(buckets[end_bucket], key, max(buckets[end_bucket].hr_max, value))
-
-                    if end_bucket - start_bucket > 1:
-                        #if it covers more than just the start and end, populate in-between buckets
-                        for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
-                            setattr(buckets[i], key, max(buckets[i].hr_max, value))
-
-            elif row[3] == 'min':
-                # Max from an interval will become the maximum for any bucket that it is at least HALF in
-                #TODO - consider case that nothing is there
-                key = row[3]
-                value = row[4]
-
-                if (start_bucket == end_bucket):
-                    insertMin(buckets, value, end_bucket)
+                incrementBucket(buckets, value * startSeconds / totalSeconds, start_bucket, key)
+                incrementBucket(buckets, value * endSeconds / totalSeconds, end_bucket, key)
+                for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
+                    incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
 
 
-                else:
-                    percentageOfStart = float((buckets[start_bucket].end_time - start_interval).seconds) /  float((end_interval - start_interval).seconds)
-                    percentageOfEnd = float((end_interval - buckets[end_bucket].start_time).seconds) /   float((end_interval - start_interval).seconds)
+        elif row[3] == 'max':
+            #Max from an interval will become the maximum for any bucket that it is at least HALF in
+            #TODO - consider case that nothing is there
+            key = row[3]
+            value = row[4]
 
-                    if percentageOfStart > .5:
-                        insertMin(buckets, value, start_bucket)
+            if (start_bucket == end_bucket):
+                # if they're in the same bucket we can just make it the max
+                setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
 
-                    if percentageOfEnd > .5:
+            else:
+                percentageOfStart = float((buckets[start_bucket].end_time - start_interval).seconds) / float((end_interval - start_interval).seconds)
+                percentageOfEnd = float((end_interval - buckets[end_bucket].start_time).seconds) / float((end_interval - start_interval).seconds)
 
-                        insertMin(buckets, value, end_bucket)
+                if percentageOfStart > .5:
+                    setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max, value))
 
-                    if end_bucket - start_bucket > 1:
-                        # if it covers more than just the start and end, populate in-between buckets
-                        for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
-                            insertMin(buckets, value, i)
+                if percentageOfEnd > .5:
+                    setattr(buckets[end_bucket], key, max(buckets[end_bucket].hr_max, value))
 
-            elif row[3] == 'average':
-                # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
-                # TODO - consider case that nothing is there
-                key = row[3]
-                value = row[4]
+                if end_bucket - start_bucket > 1:
+                    #if it covers more than just the start and end, populate in-between buckets
+                    for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
+                        setattr(buckets[i], key, max(buckets[i].hr_max, value))
 
-                if (start_bucket == end_bucket):
-                    # if they're in the same bucket we have to average
-                    setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
+        elif row[3] == 'min':
+            # Max from an interval will become the maximum for any bucket that it is at least HALF in
+            #TODO - consider case that nothing is there
+            key = row[3]
+            value = row[4]
 
-                else:
-
-                    setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, buckets[start_bucket].end_time)
-                    setAverageBucketValue(buckets, interval, end_bucket, key, value, buckets[end_bucket].start_time, end_interval)
-
-                    if end_bucket - start_bucket > 1:
-                        # if it covers more than just the start and end, populate in-between buckets
-                        for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
-                            setAverageBucketValue(buckets, interval, i, key, value,  buckets[i].start_time, buckets[i].end_time)
+            if (start_bucket == end_bucket):
+                insertMin(buckets, value, end_bucket)
 
 
             else:
-                print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
+                percentageOfStart = float((buckets[start_bucket].end_time - start_interval).seconds) /  float((end_interval - start_interval).seconds)
+                percentageOfEnd = float((end_interval - buckets[end_bucket].start_time).seconds) /   float((end_interval - start_interval).seconds)
+
+                if percentageOfStart > .5:
+                    insertMin(buckets, value, start_bucket)
+
+                if percentageOfEnd > .5:
+
+                    insertMin(buckets, value, end_bucket)
+
+                if end_bucket - start_bucket > 1:
+                    # if it covers more than just the start and end, populate in-between buckets
+                    for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
+                        insertMin(buckets, value, i)
+
+        elif row[3] == 'average':
+            # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
+            # TODO - consider case that nothing is there
+            key = row[3]
+            value = row[4]
+
+            if (start_bucket == end_bucket):
+                # if they're in the same bucket we have to average
+                setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
+
+            else:
+
+                setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, buckets[start_bucket].end_time)
+                setAverageBucketValue(buckets, interval, end_bucket, key, value, buckets[end_bucket].start_time, end_interval)
+
+                if end_bucket - start_bucket > 1:
+                    # if it covers more than just the start and end, populate in-between buckets
+                    for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
+                        setAverageBucketValue(buckets, interval, i, key, value,  buckets[i].start_time, buckets[i].end_time)
+
+
+        else:
+            print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
 
     return buckets
 
