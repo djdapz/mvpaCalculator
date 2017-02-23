@@ -75,10 +75,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
                         #for i in [1,2]:
                         print "<td>"
-                        print str(start_interval.month)  +', ' + str(start_interval.day) +' ' + str(start_interval.year)
+                        print str(start_interval.hour)  +':' + str(start_interval.miunute) +':' + str(start_interval.second)
                         print "</td>"
                         print "<td>"
-                        print str(end_interval.month)  +', ' + str(end_interval.day) +' ' + str(end_interval.year)
+                        print str(end_interval.hour)  +':' + str(end_interval.miunute) +':' + str(end_interval.second)
                         print "</td>"
 
                         #print "</tr>"
