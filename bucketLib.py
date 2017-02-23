@@ -139,13 +139,14 @@ def buildOutMissingValues(buckets):
         if bucket.calories == None:
             bucket.calories = base_calories_per_minute * interval
 
+        print "heart rate srt"
         if bucket.heart_rate:
             last_hr = bucket.heart_rate
         else:
             diff = bucket.heart_rate - last_hr
             last_hr -= diff
             bucket.heart_rate = last_hr
-
+        print "heart rate"
         #
         # if bucket.hr_max:
         #     last_max = bucket.hr_max

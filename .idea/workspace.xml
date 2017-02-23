@@ -36,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="146" column="39" lean-forward="true" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+            <state relative-caret-position="174">
+              <caret line="141" column="29" lean-forward="false" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487887519000" expanded="true" signature="4530:4583" ph="select disti... raw_fit" />
+                <marker date="1487887601000" expanded="true" signature="4587:4640" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -117,8 +117,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="720" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -407,7 +408,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="720" y="23" width="720" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -526,11 +527,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="146" column="39" lean-forward="true" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+        <state relative-caret-position="174">
+          <caret line="141" column="29" lean-forward="false" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487887519000" expanded="true" signature="4530:4583" ph="select disti... raw_fit" />
+            <marker date="1487887601000" expanded="true" signature="4587:4640" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
