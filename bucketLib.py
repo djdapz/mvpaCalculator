@@ -90,9 +90,10 @@ def getBuckets(uid = "Fahad"):
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
-
+    rowcounter = 0
     for row in rows:
-        print "<p>iterating buckets...</p>"
+        rowcounter = rowcounter + 1
+        print "<p>starting on row "+str(rowcounter)"...</p><ul>"
 
         #map to row
         #make sure data is in format
@@ -100,6 +101,7 @@ def getBuckets(uid = "Fahad"):
         row[1] = row[1].strip()
         row[2] = row[2].strip()
         row[3] = row[3].strip()
+        print "<li>stripped</li>"
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
 
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
