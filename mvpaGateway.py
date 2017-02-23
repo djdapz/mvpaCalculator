@@ -66,7 +66,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 step_sum = 0
                 calories_sum = 0
                 for bucket in buckets:
-                    if(bucket.steps !== None):
+                    if bucket.steps:
                         step_sum += bucket.steps
                     # calories_sum = bucket.calories + calories_sum
                     bucket.printTableRow()
