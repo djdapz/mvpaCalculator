@@ -19,6 +19,7 @@ class Bucket:
         self.hr_min = None
         self.steps = None
         self.calories = None
+        self.mvpa_guess = false
 
     def printTableRow(self):
         print "<tr>"
@@ -51,12 +52,38 @@ class Bucket:
         print str(self.calories)
         print "</td>"
 
+        print "<td>"
+        print str(self.guessed_mvpa)
+        print "</td>"
+
         print "</tr>"
 
     def printTableHeader(self):
         print "<tr><th>start_time</th><th>end_time</th><th>hr</th><th>hr_max</th>"
-        print "<th>hr_min</th><th>steps</th><th>calories</th></tr>"
+        print "<th>hr_min</th><th>steps</th><th>calories</th><th>guessed_mvpa</th></tr>"
 
+
+
+def labelBuckets(buckets):
+    interval = (buckets[0].end_time - buckets[0].start_time).seconds / 60 #in minutes
+    steps_per_minute_threshold = 30
+    steps_threshold = interval * steps_per_minute_threshold
+    base_calories_per_minute = 6.08333/5
+    calories_threshold = interval * base_calories_per_minute * 2
+    hr_threshold = 90
+    for bucket in bucket:
+        #when we have betas do the regression p = alpha + B1*x1 ...
+        #if p > .5 ==> true
+        if bucket.steps and bucket.steps > steps_threshold:
+            bucket.mvpa_guess == True
+        elif if bucket.calories and bucket.calories > calories_threshold:
+            bucket.mvpa_guess == True
+        elif if bucket.hr_max and bucket.hr_max > hr_threshold:
+            bucket.mvpa_guess == True
+        elif if bucket.hr_min and bucket.hr_min > hr_threshold:
+            bucket.mvpa_guess == True
+        elif if bucket.heart_rate and bucket.heart_rate > hr_threshold:
+            bucket.mvpa_guess == True
 
 
 

@@ -61,6 +61,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<p>entering getBuckets()...<p>"
                 buckets = bucketLib.getBuckets()
                 print "<p>got buckets...<p>"
+                bucketLib.labelBuckets(buckets)
+
                 print "<table>"
                 buckets[0].printTableHeader()
                 step_sum = 0
