@@ -194,7 +194,7 @@ def getBuckets(uid = "Fahad"):
 
 
         elif row[3] == 'max':
-
+            print "max encountred"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
