@@ -75,7 +75,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key('special_dates'):
             special_dates = form.getvalue("special_dates")
             if special_dates == "original_testing":
-
+                start_time = datetime(2017, 2, 19, 20, 0, 0)
+                end_time = datetime(2017, 2, 20, 22, 0, 0)
 
         if form.has_key("start_time"):
             start_time = datetime.strptime(form.getvalue("start_time"), '%I:%M:%S %p %b %d, %Y')
