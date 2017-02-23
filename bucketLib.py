@@ -98,11 +98,7 @@ def getBuckets(uid = "Fahad"):
         #map to row
         #make sure data is in format
 
-        print "<li>stripping 0</li>"
-        print row[0]
-        row[0] = str(row[0]).strip()
-
-        print "<li>stripped 0</li>"
+        print "<li>stripping 1</li>"
         row[1] = str(row[1]).strip()
 
         print "<li>stripped 1</li>"
