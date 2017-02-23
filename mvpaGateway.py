@@ -70,7 +70,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         print "<tr>"
                         for i in [1,2]:
                                 print "<td>"
-                                print "hey"
+                                print row[i]
                                 print "</td>"
 
                         print "</tr>"
