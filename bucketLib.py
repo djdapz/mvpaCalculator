@@ -132,6 +132,7 @@ def buildOutMissingValues(buckets):
     last_hr = 0
 
     for bucket in buckets:
+        print 'building out'
         if bucket.steps == None:
             bucket.steps = 0
 
