@@ -98,10 +98,16 @@ def getBuckets(uid = "Fahad"):
         #map to row
         #make sure data is in format
         row[0] = str(row[0]).strip()
+
+        print "<li>stripped 0</li>"
         row[1] = str(row[1]).strip()
+
+        print "<li>stripped 1</li>"
         row[2] = str(row[2]).strip()
+
+        print "<li>stripped 2</li>"
         row[3] = str(row[3]).strip()
-        print "<li>stripped</lis"
+        print "<li>stripped all</li>"
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
 
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
