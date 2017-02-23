@@ -126,6 +126,7 @@ def labelBuckets(buckets):
 def buildOutMissingValues(buckets):
     base_calories_per_minute = 6.08333 / 5
     interval = buckets[0].getInterval()
+    resting_heart_rate = 55
 
     last_max = 0
     last_min = 0
@@ -144,7 +145,7 @@ def buildOutMissingValues(buckets):
             last_hr = bucket.heart_rate
         else:
             print "diff start"
-            diff = bucket.heart_rate - last_hr
+            diff = resting_heart_rate - last_hr
             print "diff end"
             last_hr -= diff
             bucket.heart_rate = last_hr
