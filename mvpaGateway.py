@@ -70,15 +70,15 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 for row in rows:
                         print "<tr>"
 
-                        start_interval = datetime.strptime(str(row[1]), '%I:%M:%S %p %b %d, %Y')
+                        start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
 
                         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
                         #for i in [1,2]:
                         print "<td>"
-                        print str(start_interval.hour)  +':' + str(start_interval.miunute) +':' + str(start_interval.second)
+                        print str(start_interval.hour)  +':' + str(start_interval.minute) +':' + str(start_interval.second) + "    " + row[1]
                         print "</td>"
                         print "<td>"
-                        print str(end_interval.hour)  +':' + str(end_interval.miunute) +':' + str(end_interval.second)
+                        print str(end_interval.hour)  +':' + str(end_interval.minute) +':' + str(end_interval.second)+ "    " + row[2]
                         print "</td>"
 
                         #print "</tr>"
