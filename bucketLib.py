@@ -201,7 +201,7 @@ def getBuckets(uid = "Fahad"):
 
             if (start_bucket == end_bucket):
                 # if they're in the same bucket we can just make it the max
-                setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
+                buckets[start_bucket].hr_max = max(buckets[start_bucket].hr_max, value)
 
 
             else:
@@ -209,15 +209,16 @@ def getBuckets(uid = "Fahad"):
                 percentageOfEnd = float((end_interval - buckets[end_bucket].start_time).seconds) / float((end_interval - start_interval).seconds)
 
                 if percentageOfStart > .5:
-                    setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max, value))
+                    buckets[start_bucket].hr_max = max(buckets[start_bucket].hr_max, value)
 
                 if percentageOfEnd > .5:
-                    setattr(buckets[end_bucket], key, max(buckets[end_bucket].hr_max, value))
+                    buckets[end_bucket].hr_max = max(buckets[end_bucket].hr_max, value)
 
                 if end_bucket - start_bucket > 1:
                     #if it covers more than just the start and end, populate in-between buckets
                     for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
-                        setattr(buckets[i], key, max(buckets[i].hr_max, value))
+
+                        buckets[i].hr_max = max(buckets[i].hr_max, value)
 
         elif row[3] == 'min':
 
