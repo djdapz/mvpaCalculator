@@ -124,7 +124,6 @@ def labelBuckets(buckets):
             bucket.mvpa_guess = True
 
 def buildOutMissingValues(buckets):
-    print "buildout"
     base_calories_per_minute = 6.08333 / 5
     interval = buckets[0].getInterval()
 
@@ -133,6 +132,7 @@ def buildOutMissingValues(buckets):
     last_hr = 0
 
     for bucket in buckets:
+        print "looping"
         if bucket.steps == None:
             bucket.steps = 0
 
