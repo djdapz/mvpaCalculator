@@ -58,29 +58,28 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         print "<h3>testing the bash script.</h3>"
 
         try:
-                print "<p>getting buckets...<p>"
                 buckets = bucketLib.getBuckets()
-                print "<p>got buckets...<p>"
-
-                print "<p>labeling buckets...<p>"
                 bucketLib.labelBuckets(buckets)
-                print "<p>labeled buckets...<p>"
-
+                interval = buckets[0].getInterval()
 
                 print "<table>"
                 buckets[0].printTableHeader()
                 step_sum = 0
                 calories_sum = 0
+                mvpa_sum = 0
                 for bucket in buckets:
                     if bucket.steps:
                         step_sum += bucket.steps
                     if bucket.calories:
                         calories_sum = bucket.calories + calories_sum
+                    if bucket.mvpa_guess == True:
+                        mvpa_sum += interval
                     bucket.printTableRow()
                 print "</table>"
 
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
+                print "<h2>mvpa_sum : " + str(step_sum) + "</h2>"
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])

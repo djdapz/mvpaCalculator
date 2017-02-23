@@ -21,6 +21,9 @@ class Bucket:
         self.calories = None
         self.mvpa_guess = False
 
+    def getInterval(self):
+        return  (self.end_time - self.start_time).seconds / 60 #in minutes
+
     def printTableRow(self):
         print "<tr>"
 
@@ -65,7 +68,6 @@ class Bucket:
 
 
 def labelBuckets(buckets):
-    interval = (buckets[0].end_time - buckets[0].start_time).seconds / 60 #in minutes
     steps_per_minute_threshold = 30
     steps_threshold = interval * steps_per_minute_threshold
     base_calories_per_minute = 6.08333/5
