@@ -26,79 +26,90 @@ class Bucket:
     def getInterval(self):
         return  (self.end_time - self.start_time).seconds / 60 #in minutes
 
-    def printCsvRow(self):
-        print "<p>"
+    def printRow(self, mode):
+        if mode == "table":
+            print "<tr>"
 
-        print str(self.start_time.month) + '/' + str(self.start_time.day) + '     ' + str(
-            self.start_time.hour) + ":" + str(self.start_time.minute)
-        print ", "
+            print "<td>"
+            print str(self.start_time.month) + '/' + str(self.start_time.day)+ '     ' + str(self.start_time.hour) + ":" + str(self.start_time.minute)
+            print "</td>"
 
-        print str(self.end_time.month) + '/' + str(self.end_time.day) + '     ' + str(self.end_time.hour) + ":" + str(
-            self.end_time.minute)
-        print ", "
+            print "<td>"
+            print str(self.end_time.month) + '/' + str(self.end_time.day)+ '     ' + str(self.end_time.hour) + ":" + str(self.end_time.minute)
+            print "</td>"
 
-        print str(self.heart_rate)
-        print ", "
+            print "<td>"
+            print str(self.heart_rate)
+            print "</td>"
 
-        print str(self.hr_max)
-        print ", "
+            print "<td>"
+            print str(self.hr_max)
+            print "</td>"
 
-        print str(self.hr_min)
-        print ", "
+            print "<td>"
+            print str(self.hr_min)
+            print "</td>"
 
-        print str(self.steps)
-        print ", "
+            print "<td>"
+            print str(self.steps)
+            print "</td>"
 
-        print str(self.calories)
-        print ", "
+            print "<td>"
+            print str(self.calories)
+            print "</td>"
 
-        print str(self.mvpa_guess)
+            print "<td>"
+            print str(self.mvpa_guess)
+            print "</td>"
 
-        print "</p>"
+            print "</tr>"
+        elif mode == "csv":
+            print "<p>"
 
-    def printCsvHeader(self):
-        print "<p>start_time, end_time, hr, hr_max, hr_min, steps, calories, guessed_mvpa</p>"
+            print (str(self.start_time.month) + '/' + str(self.start_time.day) + '     ' + str(
+                self.start_time.hour) + ":" + str(self.start_time.minute)).strip()
+            print ", "
 
-    def printTableRow(self):
-        print "<tr>"
+            print (
+            str(self.end_time.month) + '/' + str(self.end_time.day) + '     ' + str(self.end_time.hour) + ":" + str(
+                self.end_time.minute)).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.start_time.month) + '/' + str(self.start_time.day)+ '     ' + str(self.start_time.hour) + ":" + str(self.start_time.minute)
-        print "</td>"
+            print str(self.heart_rate).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.end_time.month) + '/' + str(self.end_time.day)+ '     ' + str(self.end_time.hour) + ":" + str(self.end_time.minute)
-        print "</td>"
+            print str(self.hr_max).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.heart_rate)
-        print "</td>"
+            print str(self.hr_min).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.hr_max)
-        print "</td>"
+            print str(self.steps).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.hr_min)
-        print "</td>"
+            print str(self.calories).strip()
+            print ", "
 
-        print "<td>"
-        print str(self.steps)
-        print "</td>"
+            print str(self.mvpa_guess).strip()
 
-        print "<td>"
-        print str(self.calories)
-        print "</td>"
+            print "</p>"
+        elif mode =="quiet":
+            return
+        else:
+            print "MODE UNKNOWN - ROW"
 
-        print "<td>"
-        print str(self.mvpa_guess)
-        print "</td>"
 
-        print "</tr>"
+    def printHeader(self, mode):
+        if mode =="table":
+            print "<tr><th>start_time</th><th>end_time</th><th>hr</th><th>hr_max</th>"
+            print "<th>hr_min</th><th>steps</th><th>calories</th><th>guessed_mvpa</th></tr>"
+        elif mode =="csv":
+            print "<p>start_time, end_time, hr, hr_max, hr_min, steps, calories, guessed_mvpa</p>"
+        elif mode == "quiet":
+            return
+        else:
+            print "MODE UNKNOWN - HEADER"
 
-    def printTableHeader(self):
-        print "<tr><th>start_time</th><th>end_time</th><th>hr</th><th>hr_max</th>"
-        print "<th>hr_min</th><th>steps</th><th>calories</th><th>guessed_mvpa</th></tr>"
 
 
 

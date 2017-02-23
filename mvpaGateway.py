@@ -56,6 +56,13 @@ if os.environ['REQUEST_METHOD'] == 'POST':
 elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
+        mode = "csv"
+
+        if form.has_key("mode"):
+            mode = form.getvalue("mode")
+
+
+
         try:
                 buckets = bucketLib.getBuckets()
                 bucketLib.buildOutMissingValues(buckets)
@@ -63,8 +70,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 interval = buckets[0].getInterval()
 
 
-                print "<table>"
-                buckets[0].printTableHeader()
+
+                if mode == "table":
+                    print "<table>"
+                buckets[0].printHeader(mode)
                 step_sum = 0
                 calories_sum = 0
                 mvpa_sum = 0
@@ -75,8 +84,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         calories_sum = bucket.calories + calories_sum
                     if bucket.mvpa_guess == True:
                         mvpa_sum += interval
-                    bucket.printTableRow()
-                print "</table>"
+                    bucket.printRow(mode)
+                if mode == "table":
+                    print "</table>"
 
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
