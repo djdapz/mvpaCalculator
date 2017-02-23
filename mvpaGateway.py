@@ -66,13 +66,14 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 step_sum = 0
                 calories_sum = 0
                 for bucket in buckets:
-                    step_sum += float(bucket.steps)
+                    if(bucket.steps !== None):
+                        step_sum += bucket.steps
                     # calories_sum = bucket.calories + calories_sum
                     bucket.printTableRow()
                 print "</table>"
 
                 # print "<h2>calories sum: " + calories_sum + "</h2>"
-                # print "<h2>step_sum : " + step_sum + "</h2>"
+                print "<h2>step_sum : " + step_sum + "</h2>"
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
