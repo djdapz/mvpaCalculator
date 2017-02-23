@@ -52,7 +52,7 @@ if os.environ['REQUEST_METHOD'] == 'POST':
 elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
-        print "<h3>New get request kinda working...</h3>"
+        print "<h3>testing the bash script.</h3>"
         try:
                 con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
                 cur = con.cursor()
