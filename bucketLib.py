@@ -65,6 +65,7 @@ class Bucket:
 
 
 def labelBuckets(buckets):
+    return
     # interval = (buckets[0].end_time - buckets[0].start_time).seconds / 60 #in minutes
     # steps_per_minute_threshold = 30
     # steps_threshold = interval * steps_per_minute_threshold
