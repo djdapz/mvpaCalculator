@@ -201,7 +201,6 @@ def getBuckets(uid = "Fahad"):
 
             if (start_bucket == end_bucket):
                 # if they're in the same bucket we can just make it the max
-                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
 
 
@@ -228,6 +227,8 @@ def getBuckets(uid = "Fahad"):
             value = row[4]
 
             if (start_bucket == end_bucket):
+
+                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 insertMin(buckets, value, end_bucket)
 
 

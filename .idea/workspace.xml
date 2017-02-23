@@ -36,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="230" column="81" lean-forward="false" selection-start-line="230" selection-start-column="81" selection-end-line="230" selection-end-column="81" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1487882502000" expanded="true" signature="3641:3694" ph="select disti... raw_fit" />
+                <marker date="1487882689000" expanded="true" signature="3641:3694" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -88,8 +88,8 @@
       <find>min_hr</find>
       <find>g</find>
       <find>&lt;/td&gt;</find>
-      <find>days</find>
       <find>setattr</find>
+      <find>days</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -487,6 +487,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="2743" column="0" lean-forward="false" selection-start-line="2743" selection-start-column="0" selection-end-line="2743" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_strptime.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -495,11 +503,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/pandas/core/generic.py">
+    <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="2743" column="0" lean-forward="false" selection-start-line="2743" selection-start-column="0" selection-end-line="2743" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -514,23 +524,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="230" column="81" lean-forward="false" selection-start-line="230" selection-start-column="81" selection-end-line="230" selection-end-column="81" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1487882502000" expanded="true" signature="3641:3694" ph="select disti... raw_fit" />
+            <marker date="1487882689000" expanded="true" signature="3641:3694" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
