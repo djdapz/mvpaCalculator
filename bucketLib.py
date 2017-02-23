@@ -53,7 +53,7 @@ class Bucket:
         print "</td>"
 
         print "<td>"
-        print str(self.guessed_mvpa)
+        print str(self.mvpa_guess)
         print "</td>"
 
         print "</tr>"
