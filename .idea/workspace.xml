@@ -37,10 +37,10 @@
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+              <caret line="154" column="57" lean-forward="false" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487888219000" expanded="true" signature="4662:4715" ph="select disti... raw_fit" />
+                <marker date="1487888313000" expanded="true" signature="4993:5046" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -89,8 +89,8 @@
       <find>g</find>
       <find>&lt;/td&gt;</find>
       <find>setattr</find>
-      <find>days</find>
       <find>print</find>
+      <find>days</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -117,9 +117,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="720" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -408,7 +407,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -528,10 +527,10 @@
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="148" column="39" lean-forward="true" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
+          <caret line="154" column="57" lean-forward="false" selection-start-line="154" selection-start-column="57" selection-end-line="154" selection-end-column="57" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487888219000" expanded="true" signature="4662:4715" ph="select disti... raw_fit" />
+            <marker date="1487888313000" expanded="true" signature="4993:5046" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
