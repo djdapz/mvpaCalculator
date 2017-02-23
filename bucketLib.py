@@ -76,14 +76,14 @@ def labelBuckets(buckets):
         # if p > .5 ==> true
         if bucket.steps and bucket.steps > steps_threshold:
             bucket.mvpa_guess = True
-        elif if bucket.calories and bucket.calories > calories_threshold:
-            bucket.mvpa_guess = True
-        elif if bucket.hr_max and bucket.hr_max > hr_threshold:
-            bucket.mvpa_guess = True
-        elif if bucket.hr_min and bucket.hr_min > hr_threshold:
-            bucket.mvpa_guess = True
-        elif if bucket.heart_rate and bucket.heart_rate > hr_threshold:
-            bucket.mvpa_guess = True
+        # elif if bucket.calories and bucket.calories > calories_threshold:
+        #     bucket.mvpa_guess = True
+        # elif if bucket.hr_max and bucket.hr_max > hr_threshold:
+        #     bucket.mvpa_guess = True
+        # elif if bucket.hr_min and bucket.hr_min > hr_threshold:
+        #     bucket.mvpa_guess = True
+        # elif if bucket.heart_rate and bucket.heart_rate > hr_threshold:
+        #     bucket.mvpa_guess = True
 
 
 
