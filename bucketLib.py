@@ -19,7 +19,7 @@ class Bucket:
         self.hr_min = None
         self.steps = None
         self.calories = None
-        self.mvpa_guess = false
+        self.mvpa_guess = False
 
     def printTableRow(self):
         print "<tr>"
