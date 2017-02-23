@@ -63,11 +63,16 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<p>got buckets...<p>"
                 print "<table>"
                 buckets[0].printTableHeader()
+                step_sum = 0
+                calories_sum = 0
                 for bucket in buckets:
+                    step_sum = bucket.steps + step_sum
+                    calories_sum = buckets.sum + calories_sum
                     bucket.printTableRow()
-
                 print "</table>"
 
+                print "<h2>calories sum: " + calories_sum + "</h2>"
+                print "<h2>step_sum : " + step_sum + "</h2>"
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
