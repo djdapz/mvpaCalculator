@@ -68,6 +68,8 @@ def getBuckets(uid = "Fahad"):
     cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
     rows = cur.fetchall()
 
+    print "<p>got rows...<p>"
+
 
     now = datetime.now()
     start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
