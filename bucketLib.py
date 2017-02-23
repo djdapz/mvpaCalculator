@@ -71,20 +71,19 @@ def labelBuckets(buckets):
     base_calories_per_minute = 6.08333/5
     calories_threshold = interval * base_calories_per_minute * 2
     hr_threshold = 90
-    print "<p> entering loop </p>"
     for bucket in buckets:
         # when we have betas do the regression p = alpha + B1*x1 ...
         # if p > .5 ==> true
         if bucket.steps > steps_threshold:
             bucket.mvpa_guess = True
-        # elif if bucket.calories and bucket.calories > calories_threshold:
-        #     bucket.mvpa_guess = True
-        # elif if bucket.hr_max and bucket.hr_max > hr_threshold:
-        #     bucket.mvpa_guess = True
-        # elif if bucket.hr_min and bucket.hr_min > hr_threshold:
-        #     bucket.mvpa_guess = True
-        # elif if bucket.heart_rate and bucket.heart_rate > hr_threshold:
-        #     bucket.mvpa_guess = True
+        elif if bucket.calories and bucket.calories > calories_threshold:
+            bucket.mvpa_guess = True
+        elif if bucket.hr_max and bucket.hr_max > hr_threshold:
+            bucket.mvpa_guess = True
+        elif if bucket.hr_min and bucket.hr_min > hr_threshold:
+            bucket.mvpa_guess = True
+        elif if bucket.heart_rate and bucket.heart_rate > hr_threshold:
+            bucket.mvpa_guess = True
 
 
 
