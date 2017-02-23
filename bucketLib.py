@@ -142,12 +142,11 @@ def buildOutMissingValues(buckets):
         if bucket.heart_rate:
             last_hr = bucket.heart_rate
         else:
-            diff = resting_heart_rate - last_hr
-            if(diff > 0):
-                last_hr += diff / 2
+            if last_hr > resting_heart_rate:
+                bucket.heart_rate = last_hr - int((last_hr - resting_heart_rate)/2)
             else:
-                last_hr -= diff / 2
-            bucket.heart_rate = last_hr
+                bucket.heart_rate = last_hr + int((resting_heart_rate - last_hr) / 2)
+
         #
         # if bucket.hr_max:
         #     last_max = bucket.hr_max
