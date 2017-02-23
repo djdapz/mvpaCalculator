@@ -1,4 +1,4 @@
-import MySQLdb as mdb
+#import MySQLdb as mdb
 import sys
 import cgi
 import cgitb
@@ -24,50 +24,53 @@ class Bucket:
         print "<tr>"
 
         print "<td>"
-        print self.start_time
+        print str(self.start_time)
         print "</td>"
 
         print "<td>"
-        print self.end_time
+        print str(self.end_time)
         print "</td>"
 
         print "<td>"
-        print self.heart_rate
+        print str(self.heart_rate)
         print "</td>"
 
         print "<td>"
-        print self.hr_max
+        print str(self.hr_max)
         print "</td>"
 
         print "<td>"
-        print self.hr_min
+        print str(self.hr_min)
         print "</td>"
 
         print "<td>"
-        print self.steps
+        print str(self.steps)
         print "</td>"
 
         print "<td>"
-        print self.calories
+        print str(self.calories)
         print "</td>"
 
         print "</tr>"
 
     def printTableHeader(self):
-        print "<tr><th>start_time</th><th>end_time</th><th>hr</th><th>hr_max</th><th>hr_min</th><th>steps</th><th>calories</th></tr>"
+        print "<tr><th>start_time</th><th>end_time</th><th>hr</th><th>hr_max</th>"
+        print "<th>hr_min</th><th>steps</th><th>calories</th></tr>"
 
 
 
 
 def getBuckets(uid = "Fahad"):
-    print "<p>in getBuckets()...</p>"
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
-    #todo get uid
-    cur.execute("select distinct * from raw_fit where uid = '"+ uid+"'")
+    # todo get uid
+    cur.execute("select distinct * from raw_fit where uid = '" + uid + "'")
     rows = cur.fetchall()
 
+
+
+    print "<p>in getBuckets()...</p>"
     print "<p>got rows...</p>"
 
 
@@ -94,6 +97,7 @@ def getBuckets(uid = "Fahad"):
     for row in rows:
         rowcounter = rowcounter + 1
         print "<p>starting on row "+str(rowcounter) + "...</p><ul>"
+
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
