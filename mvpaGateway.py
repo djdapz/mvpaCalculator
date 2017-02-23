@@ -70,6 +70,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 for row in rows:
                         print "<tr>"
                         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
+                        print "something"
                         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b, %d %Y')
                         #for i in [1,2]:
                         print "<td>"
