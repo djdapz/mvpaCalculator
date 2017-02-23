@@ -1,0 +1,290 @@
+hr, hr_max, hr_min, steps, calories, guessed_mvpa
+ None , None , None ,24.42164179,3.061942767, False
+ None , None , None ,83.57835821,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,5.132790033, False
+ None , None , None , None ,5.145379967, False
+ None , None , None , None ,6.08333, False
+67, None ,67,18.28378378,4.3998159, False
+ None , None , None ,60.84032969,7.806631333, False
+ None , None , None ,140.2776722, None , False
+ None , None , None ,446.8682143,22.23980567, True
+ None , None , None ,537.04,23.1167, True
+ None , None , None ,547.0266667,23.1167, True
+ None , None , None ,356.7133333,19.792586, True
+94, None ,89,130.7733333,13.26504367, True
+ None , None , None ,432.7233333,27.961348, True
+ None , None , None ,691.52,42.91721767, True
+124.5, None ,78,480.5766667,31.62390467, True
+70, None ,70,401.89,25.89957967, True
+87.8633, None ,52,507.3168409,36.72694603, True
+87.8633, None , None ,253.0998258,23.18113979, True
+ None , None , None ,1.05,4.273041057, False
+ None , None , None ,0.566666667,4.567134627, False
+ None , None , None ,0.433333333,4.593935933, False
+73, None ,73, None ,4.235625759, False
+ None , None , None , None ,1.330789554, False
+ None , None , None , None ,3.259564906, False
+ None , None , None , None ,6.078523868, False
+71, None ,71,30.05490196,2.354083146, False
+ None , None , None ,17.94509804,3.471817767, False
+64, None ,61, None ,6.08333, False
+ None , None , None ,1,6.083542954, False
+ None , None , None , None ,3.956134677, False
+64, None ,64, None ,5.61869267, False
+ None , None , None ,2,5.6222197, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,10.26666667,5.4185374, False
+ None , None , None ,0.733333333,5.4273426, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,43,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,9,6.08333, False
+ None , None , None ,53.00420168,6.831303467, False
+ None , None , None ,370.472465,22.07107277, True
+ None , None , None ,586.4566667,39.81116833, True
+ None , None , None ,468.8413146,29.74366033, True
+ None , None , None ,74.22535211,11.2416951, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+68, None ,68, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+57, None ,57, None ,8.784967276, False
+74, None ,74,54,5.842709169, False
+ None , None , None , None ,6.083753555, False
+64, None ,64, None ,6.08333, False
+ None , None , None ,1.7,6.08333, False
+ None , None , None ,0.3,6.08333, False
+61, None ,61, None ,6.08333, False
+ None , None , None ,22,6.08333, False
+ None , None , None , None ,6.08333, False
+47, None ,47, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,1,6.08333, False
+95, None ,95, None ,6.08333, True
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+56, None ,56, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+51, None ,51, None ,6.08333, False
+ None , None , None ,24.1576087,9.6505389, False
+ None , None , None ,238.7423913,12.15740833, True
+64, None ,64,229.6546875, None , True
+ None , None , None ,113.1939464,4.616882767, False
+ None , None , None ,17.13708041,6.08333, False
+ None , None , None ,50.11428571,5.131717933, False
+ None , None , None ,0.825396825,5.144322067, False
+ None , None , None ,3.174603175,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,10,6.08333, False
+ None , None , None ,79.5,6.08333, False
+93, None ,93,347.81,13.78713357, True
+ None , None , None ,554.5766667,22.25855933, True
+ None , None , None ,453.1133333,18.27589167, True
+ None , None , None , None ,9.766545433, False
+ None , None , None , None ,3.885545233, False
+ None , None , None , None , None , False
+ None , None , None , None ,3.647807767, False
+ None , None , None , None ,6.091775277, False
+ None , None , None , None ,2.541711957, False
+ None , None , None , None , None , False
+ None , None , None ,11,5.70256485, False
+ None , None , None ,48,5.541547559, False
+ None , None , None ,8,5.922717591, False
+ None , None , None , None ,2.632812186, False
+ None , None , None , None ,6.07955058, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,7,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+54, None ,54, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+66, None ,66, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+91, None ,91, None ,6.08333, True
+ None , None , None ,202.4573379,9.749393567, True
+ None , None , None ,465.6226621,18.27429933, True
+ None , None , None ,607.5702058,26.218844, True
+ None , None , None ,197.7426514,17.45038887, True
+ None , None , None ,19.60714286,5.931464233, False
+ None , None , None ,3,6.08333, False
+85, None ,85, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+53, None ,53, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+66, None ,66, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+79, None ,79, None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+75, None ,75,169.5884477,12.28523723, True
+ None , None , None ,458.138219,20.77655567, True
+160, None ,160,515.9866667,23.1167, True
+ None , None , None ,388.7133908,16.47716457, True
+ None , None , None ,108.8247044,6.097979767, False
+ None , None , None ,15.74857143, None , False
+ None , None , None ,40.348659,4.147044433, False
+ None , None , None ,21.98467433,5.9937511, False
+ None , None , None ,68.66666667,5.078830867, False
+ None , None , None ,4,3.353468, False
+ None , None , None ,56,4.901258367, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,7.559677133, False
+ None , None , None ,36,7.540122867, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,0.116666667,6.08333, False
+ None , None , None ,0.883333333,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,2.13125,6.08333, False
+ None , None , None ,109.86875,5.424097233, False
+ None , None , None ,81.39737991,1.537372781, False
+ None , None , None ,201.6026201,15.47570985, True
+ None , None , None , None ,7.030950133, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,33.23157895,8.588052567, False
+ None , None , None ,206.8384211,12.02262767, True
+ None , None , None ,84.93,9.507089567, False
+ None , None , None ,140.3946488,7.712063266, False
+ None , None , None ,179.3215674,10.10570113, True
+ None , None , None ,184.2237838,11.35930996, True
+ None , None , None ,148.06,3.913674154, False
+ None , None , None , None ,6.07236169, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,50.8988764,5.994557233, False
+ None , None , None ,58.1011236,0.113151459, False
+ None , None , None , None ,3.864779308, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None , None ,6.08333, False
+ None , None , None ,12.70918367,8.627463567, False
+57, None ,57,121.245189,7.8493616, False
+ None , None , None ,104.4692915,6.960347433, False
+ None , None , None ,146.1563359,9.678258633, False
+83.5, None ,66,106.5533333,8.061488767, False
+ None , None , None ,21.88,6.08333, False
+ None , None , None ,7.986666667,6.08333, False
+91, None ,91,1.076923077,6.08333, True
+ None , None , None ,43.73260073,6.082461194, False
+109, None ,109,31.6641604,0.060816039, True
+101, None ,101,53.99122807, None , True
+79, None ,79,15.53508772, None , False

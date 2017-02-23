@@ -23,11 +23,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+            <state relative-caret-position="40">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#19#40#0" expanded="true" />
-                <marker date="1487880324000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487882258000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -115,9 +115,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2760" />
+    <option name="x" value="1920" />
     <option name="y" value="740" />
-    <option name="width" value="840" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
@@ -406,7 +406,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2760" y="740" width="840" height="1027" extended-state="0" />
+    <frame x="1920" y="740" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -525,11 +525,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+        <state relative-caret-position="40">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="e#19#40#0" expanded="true" />
-            <marker date="1487880324000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487882258000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>

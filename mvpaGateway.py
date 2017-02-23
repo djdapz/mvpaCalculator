@@ -53,13 +53,15 @@ if os.environ['REQUEST_METHOD'] == 'POST':
                         con.close()
 
 elif os.environ['REQUEST_METHOD'] == 'GET':
+
+
         try:
                 buckets = bucketLib.getBuckets()
                 bucketLib.labelBuckets(buckets)
                 interval = buckets[0].getInterval()
 
-                #print "<table>"
-                buckets[0].printCsvHeader()
+                print "<table>"
+                buckets[0].printTableHeader()
                 step_sum = 0
                 calories_sum = 0
                 mvpa_sum = 0
@@ -70,8 +72,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         calories_sum = bucket.calories + calories_sum
                     if bucket.mvpa_guess == True:
                         mvpa_sum += interval
-                    bucket.printCsvRow()
-                #print "</table>"
+                    bucket.printTableRow()
+                print "</table>"
 
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
