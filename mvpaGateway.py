@@ -5,6 +5,7 @@ import sys
 import cgi
 import cgitb
 import os
+from datetime import datetime
 
 #
 # Good grief, we have to generate our own headers?  Crazy.
@@ -68,12 +69,18 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
                 for row in rows:
                         print "<tr>"
-                        for i in [1,2]:
+
+                        start_interval = datetime_object = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
+                        end_interval = datetime_object = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
+                        #for i in [1,2]:
                                 print "<td>"
-                                print row[i]
+                                print str(start_interval.month)  +', ' + str(start_interval.day) +' ' + str(start_interval.year) 
+                                print "</td>"
+                                print "<td>"
+                                print str(end_interval.month)  +', ' + str(end_interval.day) +' ' + str(end_interval.year)
                                 print "</td>"
 
-                        print "</tr>"
+                        #print "</tr>"
                 print "</table>"
 
 
