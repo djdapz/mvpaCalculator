@@ -71,6 +71,7 @@ def labelBuckets(buckets):
     base_calories_per_minute = 6.08333/5
     calories_threshold = interval * base_calories_per_minute * 2
     hr_threshold = 90
+    print "<p> entering loop </p>"
     for bucket in bucket:
         # when we have betas do the regression p = alpha + B1*x1 ...
         # if p > .5 ==> true
