@@ -57,14 +57,20 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
         mode = "csv"
+        uid = "Fahad"
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
 
 
+        if form.has_key("uid"):
+            uid = form.getvalue("uid")
+
+
+
 
         try:
-                buckets = bucketLib.getBuckets()
+                buckets = bucketLib.getBuckets(uid)
                 bucketLib.buildOutMissingValues(buckets)
                 bucketLib.labelBuckets(buckets)
                 interval = buckets[0].getInterval()
