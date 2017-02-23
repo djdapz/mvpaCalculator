@@ -65,13 +65,12 @@ class Bucket:
 
 
 def labelBuckets(buckets):
-    return
-    # interval = (buckets[0].end_time - buckets[0].start_time).seconds / 60 #in minutes
-    # steps_per_minute_threshold = 30
-    # steps_threshold = interval * steps_per_minute_threshold
-    # base_calories_per_minute = 6.08333/5
-    # calories_threshold = interval * base_calories_per_minute * 2
-    # hr_threshold = 90
+    interval = (buckets[0].end_time - buckets[0].start_time).seconds / 60 #in minutes
+    steps_per_minute_threshold = 30
+    steps_threshold = interval * steps_per_minute_threshold
+    base_calories_per_minute = 6.08333/5
+    calories_threshold = interval * base_calories_per_minute * 2
+    hr_threshold = 90
     # for bucket in bucket:
         #when we have betas do the regression p = alpha + B1*x1 ...
         #if p > .5 ==> true
