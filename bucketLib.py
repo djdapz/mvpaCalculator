@@ -201,7 +201,7 @@ def getBuckets(uid = "Fahad"):
 
             if (start_bucket == end_bucket):
                 # if they're in the same bucket we can just make it the max
-                print '  start=end'
+                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 setattr(buckets[start_bucket], key, max(buckets[start_bucket].hr_max,  value))
 
 
