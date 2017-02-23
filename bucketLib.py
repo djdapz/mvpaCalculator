@@ -133,23 +133,21 @@ def buildOutMissingValues(buckets):
     last_hr = 0
 
     for bucket in buckets:
-        print 'building out'
         if bucket.steps == None:
             bucket.steps = 0
 
         if bucket.calories == None:
             bucket.calories = base_calories_per_minute * interval
 
-        print "heart rate srt"
         if bucket.heart_rate:
             last_hr = bucket.heart_rate
         else:
-            print "diff start"
             diff = resting_heart_rate - last_hr
-            print "diff end"
-            last_hr += diff/2
+            if(diff > 0):
+                last_hr -= diff / 2
+            else:
+                last_hr += diff / 2
             bucket.heart_rate = last_hr
-        print "heart rate"
         #
         # if bucket.hr_max:
         #     last_max = bucket.hr_max
