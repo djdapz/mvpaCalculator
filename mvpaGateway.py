@@ -74,9 +74,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key('special_dates'):
             special_dates = form.getvalue("special_dates")
-            if special_dates == "orig_testing":
-                start_time = datetime(2017, 2, 19, 20, 0, 0)
-                end_time = datetime(2017, 2, 20, 22, 0, 0)
+            if special_dates == "original_testing":
+
 
         if form.has_key("start_time"):
             start_time = datetime.strptime(form.getvalue("start_time"), '%I:%M:%S %p %b %d, %Y')
@@ -91,7 +90,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
-
+            start_time = datetime(2017, 2, 19, 20, 0, 0)
+            end_time = datetime(2017, 2, 20, 22, 0, 0)
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
