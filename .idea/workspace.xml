@@ -23,11 +23,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="69" column="41" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+            <state relative-caret-position="397">
+              <caret line="74" column="35" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="74" selection-end-column="35" />
               <folding>
                 <element signature="e#19#40#0" expanded="true" />
-                <marker date="1487842767000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487842801000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -503,11 +503,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="69" column="41" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+        <state relative-caret-position="397">
+          <caret line="74" column="35" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="74" selection-end-column="35" />
           <folding>
             <element signature="e#19#40#0" expanded="true" />
-            <marker date="1487842767000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487842801000" expanded="true" signature="951:1325" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>
