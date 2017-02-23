@@ -192,7 +192,7 @@ def buildOutMissingValues(buckets):
 
 
 
-def getBuckets(uid = "Fahad"):
+def getBuckets(start_time, end_time, uid = "Fahad", ):
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
@@ -201,14 +201,6 @@ def getBuckets(uid = "Fahad"):
     rows = cur.fetchall()
 
 
-    now = datetime.now()
-    start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
-    end_time = datetime(now.year, now.month, now.day, 22, 0, 0)
-
-
-    # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIVE
-    start_time = datetime(2017, 2, 19, 20, 0, 0)
-    end_time = datetime(2017, 2, 20, 22, 0, 0)
 
 
     interval = 5  # IN MINUTES

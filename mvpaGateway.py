@@ -58,6 +58,12 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         mode = "csv"
         uid = "Fahad"
+        now = datetime.now()
+        #end_time = datetime(now.year, now.month, now.day, 22, 0, 0)
+        end_time = now
+        start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
+        special_dates = None
+
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
@@ -66,37 +72,51 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("uid"):
             uid = form.getvalue("uid")
 
+        if form.has_key('special_dates'):
+            special_dates = form.getvalue("special_dates")
+            if special_dates == "orig_testing":
+                start_time = datetime(2017, 2, 19, 20, 0, 0)
+                end_time = datetime(2017, 2, 20, 22, 0, 0)
+
+        if form.has_key("start_time"):
+            start_time = datetime.strptime(form.getvalue("start_time"), '%I:%M:%S %p %b %d, %Y')
+
+        if form.has_key("end_time"):
+            start_time = datetime.strptime(form.getvalue("end_time"), '%I:%M:%S %p %b %d, %Y')
+
 
 
 
         try:
-                buckets = bucketLib.getBuckets(uid)
-                bucketLib.buildOutMissingValues(buckets)
-                bucketLib.labelBuckets(buckets)
-                interval = buckets[0].getInterval()
 
 
+            # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
 
-                if mode == "table":
-                    print "<table>"
-                buckets[0].printHeader(mode)
-                step_sum = 0
-                calories_sum = 0
-                mvpa_sum = 0
-                for bucket in buckets:
-                    if bucket.steps:
-                        step_sum += bucket.steps
-                    if bucket.calories:
-                        calories_sum = bucket.calories + calories_sum
-                    if bucket.mvpa_guess == True:
-                        mvpa_sum += interval
-                    bucket.printRow(mode)
-                if mode == "table":
-                    print "</table>"
+            buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
+            bucketLib.buildOutMissingValues(buckets)
+            bucketLib.labelBuckets(buckets)
+            interval = buckets[0].getInterval()
 
-                print "<h2>calories sum: " + str(calories_sum) + "</h2>"
-                print "<h2>step_sum : " + str(step_sum) + "</h2>"
-                print "<h2>mvpa_sum : " + str(mvpa_sum) + "</h2>"
+            if mode == "table":
+                print "<table>"
+            buckets[0].printHeader(mode)
+            step_sum = 0
+            calories_sum = 0
+            mvpa_sum = 0
+            for bucket in buckets:
+                if bucket.steps:
+                    step_sum += bucket.steps
+                if bucket.calories:
+                    calories_sum = bucket.calories + calories_sum
+                if bucket.mvpa_guess == True:
+                    mvpa_sum += interval
+                bucket.printRow(mode)
+            if mode == "table":
+                print "</table>"
+
+            print "<h2>calories sum: " + str(calories_sum) + "</h2>"
+            print "<h2>step_sum : " + str(step_sum) + "</h2>"
+            print "<h2>mvpa_sum : " + str(mvpa_sum) + "</h2>"
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
