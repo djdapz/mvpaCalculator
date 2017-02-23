@@ -91,8 +91,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
-            start_time = datetime(2017, 2, 19, 20, 0, 0)
-            end_time = datetime(2017, 2, 20, 22, 0, 0)
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
