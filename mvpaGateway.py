@@ -60,7 +60,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         try:
                 buckets = bucketLib.getBuckets()
                 bucketLib.labelBuckets(buckets)
-                # interval = buckets[0].getInterval()
+                interval = buckets[0].getInterval()
 
                 print "<table>"
                 buckets[0].printTableHeader()
@@ -72,14 +72,14 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         step_sum += bucket.steps
                     if bucket.calories:
                         calories_sum = bucket.calories + calories_sum
-                    # if bucket.mvpa_guess == True:
-                    #     mvpa_sum += interval
+                    if bucket.mvpa_guess == True:
+                        mvpa_sum += interval
                     bucket.printTableRow()
                 print "</table>"
 
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
-                # print "<h2>mvpa_sum : " + str(mvpa_sum) + "</h2>"
+                print "<h2>mvpa_sum : " + str(mvpa_sum) + "</h2>"
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
