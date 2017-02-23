@@ -285,5 +285,6 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
     else:
         new_avg = value
+    print "<li> ready to set value </li>"
 
     buckets[bucketNumber].average = value
