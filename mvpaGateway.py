@@ -69,7 +69,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><th>mac</th><th>time</th><th>energy</th></tr>"
                 for row in rows:
                         print "<tr>"
-
+                        print "made it"
                         start_interval = datetime_object = datetime.strptime(row[1], '%I:%M:%S %p %b, %d %Y')
                         end_interval = datetime_object = datetime.strptime(row[2], '%I:%M:%S %p %b, %d %Y')
                         #for i in [1,2]:
@@ -84,7 +84,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "</table>"
 
 
-                print "made it"
+
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
                 sys.exit(1)
