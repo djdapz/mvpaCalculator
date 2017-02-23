@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bucketLib.py" afterPath="$PROJECT_DIR$/bucketLib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvpaGateway.py" afterPath="$PROJECT_DIR$/mvpaGateway.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +20,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -35,14 +33,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="125" column="25" lean-forward="false" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+            <state relative-caret-position="309">
+              <caret line="126" column="19" lean-forward="false" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487886404000" expanded="true" signature="4401:4454" ph="select disti... raw_fit" />
+                <marker date="1487886478000" expanded="true" signature="4422:4475" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -92,6 +90,7 @@
       <find>&lt;/td&gt;</find>
       <find>setattr</find>
       <find>days</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -106,8 +105,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/bucketLib.py" />
         <option value="$PROJECT_DIR$/mvpaGateway.py" />
+        <option value="$PROJECT_DIR$/bucketLib.py" />
       </list>
     </option>
   </component>
@@ -496,6 +495,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <element signature="e#47#68#0" expanded="true" />
+            <marker date="1487886418000" expanded="true" signature="979:1353" ph="INSERT INTO djd_user_goals... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -516,22 +526,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="125" column="25" lean-forward="false" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        <state relative-caret-position="309">
+          <caret line="126" column="19" lean-forward="false" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487886404000" expanded="true" signature="4401:4454" ph="select disti... raw_fit" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-          <folding>
-            <element signature="e#47#68#0" expanded="true" />
-            <marker date="1487886418000" expanded="true" signature="979:1353" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487886478000" expanded="true" signature="4422:4475" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>

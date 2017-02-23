@@ -124,6 +124,7 @@ def labelBuckets(buckets):
             bucket.mvpa_guess = True
 
 def buildOutMissingValues(buckets):
+    print "buildout"
     base_calories_per_minute = 6.08333 / 5
     interval = buckets[0].getInterval()
 
@@ -292,8 +293,6 @@ def getBuckets(uid = "Fahad"):
             value = row[4]
 
             if (start_bucket == end_bucket):
-
-                print '     value=' + str(value) + " bucket:" + str(start_bucket)
                 # if they're in the same bucket we have to average
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
 
