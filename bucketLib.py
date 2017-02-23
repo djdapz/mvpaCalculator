@@ -76,6 +76,7 @@ def labelBuckets(buckets):
         # when we have betas do the regression p = alpha + B1*x1 ...
         # if p > .5 ==> true
         if bucket.steps > steps_threshold:
+            print "<p>made it into condition</p>"
             bucket.mvpa_guess = True
         # elif if bucket.calories and bucket.calories > calories_threshold:
         #     bucket.mvpa_guess = True
