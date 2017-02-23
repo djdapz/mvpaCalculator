@@ -99,6 +99,7 @@ def getBuckets(uid = "Fahad"):
         #make sure data is in format
 
         print "<li>stripping 1</li>"
+        print row[1]
         row[1] = str(row[1]).strip()
 
         print "<li>stripped 1</li>"
