@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bucketLib.py" afterPath="$PROJECT_DIR$/bucketLib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvpaGateway.py" afterPath="$PROJECT_DIR$/mvpaGateway.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="256" column="0" lean-forward="true" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="251" column="61" lean-forward="true" selection-start-line="251" selection-start-column="61" selection-end-line="251" selection-end-column="61" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487979593000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
+                <marker date="1487979766000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -529,11 +528,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="256" column="0" lean-forward="true" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+        <state relative-caret-position="441">
+          <caret line="251" column="61" lean-forward="true" selection-start-line="251" selection-start-column="61" selection-end-line="251" selection-end-column="61" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487979593000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
+            <marker date="1487979766000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
