@@ -143,9 +143,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             start_time -= timedelta(form.getvalue("days_ago"), 0)
 
         try:
-            print 'here'
+
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
+            print 'here'
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
