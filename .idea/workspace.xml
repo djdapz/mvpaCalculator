@@ -23,11 +23,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="188" column="32" lean-forward="false" selection-start-line="188" selection-start-column="32" selection-end-line="188" selection-end-column="32" />
+            <state relative-caret-position="360">
+              <caret line="190" column="37" lean-forward="true" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="37" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1487967220000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487967255000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -528,11 +528,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="188" column="32" lean-forward="false" selection-start-line="188" selection-start-column="32" selection-end-line="188" selection-end-column="32" />
+        <state relative-caret-position="360">
+          <caret line="190" column="37" lean-forward="true" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="37" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1487967220000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487967255000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>
