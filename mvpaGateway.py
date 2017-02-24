@@ -77,7 +77,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
         if mode == 'api' or mode =='test':
-            print 'Content-type: text/html\n\n' #application/json\n\n'
+            print 'Content-type: #application/json\n\n'
         else:
             print 'Content-type: text/html\n\n'
 
