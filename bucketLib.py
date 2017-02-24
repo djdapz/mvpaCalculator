@@ -447,6 +447,10 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     print "</li>"
 
     print "<li>"
+    print buckets[bucketNumber].average
+    print "</li>"
+
+    print "<li>"
     print attribute
     print "</li>"
 
