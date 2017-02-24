@@ -149,16 +149,18 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
 
+
+
+            print 'here'
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
                 print "<table>"
-            if not(mode =='api'):
+            if not(mode == 'api'):
                 buckets[0].printHeader(mode)
             step_sum = 0
             calories_sum = 0
             mvpa_sum = 0
 
-            print 'here'
             for bucket in buckets:
                 if bucket.steps:
                     step_sum += bucket.steps
