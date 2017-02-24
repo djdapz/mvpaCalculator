@@ -105,7 +105,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key("help") and not mode=='api':
             if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
-                print "<h3>MvpaGateway API Help</h3>"
+                print "<h3>MvpaGateway API Help NEW TABLE</h3>"
                 print "<table>"
 
                 print "<tr><th>QUERY KEY</th><th>REQUIRED</th><th>DEFAULT VALUE</th><th>DETAILS</th></tr>"

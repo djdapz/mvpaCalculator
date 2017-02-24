@@ -192,7 +192,7 @@ def buildOutMissingValues(buckets):
 
 
 
-def getBuckets(start_time, end_time, uid = "Fahad", ):
+def getBuckets(start_time, end_time, uid):
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
@@ -251,6 +251,7 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
 
                 incrementBucket(buckets, value * startSeconds / totalSeconds, start_bucket, key)
                 incrementBucket(buckets, value * endSeconds / totalSeconds, end_bucket, key)
+                print "here"
                 for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
 
