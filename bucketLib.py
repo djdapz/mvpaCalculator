@@ -213,31 +213,7 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
         iterating_time += timedelta(0, interval * 60)
 
     print len(rows)
-    i = -1
     for row in rows:
-        i +=1
-        print "<ul>"
-
-        print "<li>"
-        print row[0]
-        print "</li>"
-
-        print "<li>"
-        print row[1]
-        print "</li>"
-
-        print "<li>"
-        print row[2]
-        print "</li>"
-
-        print "<li>"
-        print row[3]
-        print "</li>"
-
-        print "<li>"
-        print row[4]
-        print "</li>"
-
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
@@ -343,11 +319,6 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
             value = row[4]
 
             if (start_bucket == end_bucket):
-                print "<ul>"
-
-                print "<li>"
-                print "same"
-                print "</li>"
 
 
                 # if they're in the same bucket we have to average
@@ -364,12 +335,10 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
                     for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
                         setAverageBucketValue(buckets, interval, i, key, value,  buckets[i].start_time, buckets[i].end_time)
 
-            print "</ul>"
         else:
             print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
 
 
-        print "</ul>"
     return buckets
 
 
@@ -402,21 +371,12 @@ def incrementBucket(buckets, value, bucket, attribute):
 def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, start_time, end_time):
     #note start and end time are for the times IN THE BUCKET
 
-    print "<ul>"
-
-    print "<li>"
-    print "setting average"
-    print "</li>"
     bucket_start = buckets[bucketNumber].start_time
     bucket_end = buckets[bucketNumber].end_time
 
     if(start_time < bucket_start or end_time > bucket_end):
         print "ERR in setAverageBucketValue      start_time:" + str(start_time) + "    end_time: " +str(end_time) + "     bucketNumber"
         return
-
-    print "<li>"
-    print "starting conditionals"
-    print "</li>"
 
     if(start_time == bucket_start and end_time == bucket_end):
         percentage = 1
@@ -428,41 +388,9 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     elif (end_time == bucket_end):
         percentage = float((bucket_end - start_time).seconds) / float(interval * 60)
 
-    print "<li>"
-    print "done conditionals"
-    print "</li>"
-
     percentage = float((end_time - start_time).seconds) / float(interval * 60)
 
-    print "<li>"
-    print "got percentage"
-    print "</li>"
-
-    print "<li>"
-    print "getting get attr"
-    print "</li>"
-
-    print "<li>"
-    print bucketNumber
-    print "</li>"
-
-    print "<li>"
-    print buckets[bucketNumber].heart_rate
-    print "</li>"
-
-    print "<li>"
-    print attribute
-    print "</li>"
-
-
-
-
     current_avg = buckets[bucketNumber].heart_rate
-
-    print "<li>"
-    print "got current_avg"
-    print "</li>"
-
 
     if (current_avg):
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
@@ -470,5 +398,3 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
         new_avg = value
 
     buckets[bucketNumber].heart_rate = new_avg
-
-    print "</ul>"
