@@ -178,12 +178,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
             if mode == 'api':
 
-                print 'here'
                 if request == 'mvpa':
                     x = {}
                     x['mvpa'] = mvpa_sum
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
+
+                    print 'here'
                     print (json.JSONEncoder().encode(buckets))
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
