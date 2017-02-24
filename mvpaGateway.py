@@ -142,6 +142,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("days_ago"):
             start_time -= timedelta(form.getvalue("days_ago"), 0)
 
+        print 'here'
         try:
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
@@ -171,7 +172,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "</table>"
 
             if mode =='api':
-                print 'here'
                 if request =='mvpa':
                     x = {}
                     x['mvpa'] = mvpa_sum
