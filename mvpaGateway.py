@@ -13,13 +13,14 @@ import bucketLib
 #
 # Good grief, we have to generate our own headers?  Crazy.
 #
-print 'Content-type: text/html\n\n'
+
 
 form = cgi.FieldStorage()
 
 con = None
 
 if os.environ['REQUEST_METHOD'] == 'POST':
+        print 'Content-type: text/html\n\n'
         print "Post request received."
 
         # Create SQL entry
@@ -58,6 +59,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
 
+
         mode = "csv"
         uid = "Fahad"
         now = datetime.now()
@@ -70,10 +72,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("mode"):
             mode = form.getvalue("mode")
 
+        if mode == 'api' or mode =='test':
+            print 'Content-type: application/json\n\n'
+        else:
+            print 'Content-type: text/html\n\n'
+
         if mode == 'test':
             x = {}
-            print "Content-Type: application/json"
-            print
             x['mvpa'] = 100
             print x
             quit()
