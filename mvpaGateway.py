@@ -184,7 +184,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
 
-                    print 'here'
+                    print 'here asdf'
                     print (json.JSONEncoder().encode(buckets))
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
