@@ -347,7 +347,7 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
                 print "<ul>"
 
                 print "<li>"
-                print same
+                print "same"
                 print "</li>"
 
                 print "</ul>"
