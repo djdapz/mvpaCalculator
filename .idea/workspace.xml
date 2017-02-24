@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bucketLib.py" afterPath="$PROJECT_DIR$/bucketLib.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvpaGateway.py" afterPath="$PROJECT_DIR$/mvpaGateway.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +24,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="146" column="60" lean-forward="false" selection-start-line="146" selection-start-column="60" selection-end-line="146" selection-end-column="60" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1487966605000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487966674000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -36,11 +37,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="214" column="19" lean-forward="false" selection-start-line="214" selection-start-column="19" selection-end-line="214" selection-end-column="19" />
+            <state relative-caret-position="237">
+              <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487966587000" expanded="true" signature="5893:5946" ph="select disti... raw_fit" />
+                <marker date="1487966669000" expanded="true" signature="5893:5946" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -90,8 +91,8 @@
       <find>&lt;/td&gt;</find>
       <find>setattr</find>
       <find>days</find>
-      <find>print</find>
       <find>&quot;, &quot;</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -517,22 +518,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="214" column="19" lean-forward="false" selection-start-line="214" selection-start-column="19" selection-end-line="214" selection-end-column="19" />
+        <state relative-caret-position="237">
+          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487966587000" expanded="true" signature="5893:5946" ph="select disti... raw_fit" />
+            <marker date="1487966669000" expanded="true" signature="5893:5946" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="146" column="60" lean-forward="false" selection-start-line="146" selection-start-column="60" selection-end-line="146" selection-end-column="60" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1487966605000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487966674000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>

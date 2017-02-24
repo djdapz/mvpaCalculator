@@ -212,7 +212,6 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
 
-    print len(rows)
     for row in rows:
 
         #map to row
