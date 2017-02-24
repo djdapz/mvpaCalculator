@@ -23,11 +23,11 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+            <state relative-caret-position="387">
+              <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1487964475000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487964546000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -528,11 +528,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+        <state relative-caret-position="387">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1487964475000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487964546000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>

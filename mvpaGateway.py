@@ -89,6 +89,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 x['error'] = "in API mode you need a request field to get data. visit this url for help: http://murphy.wot.eecs.northwestern.edu/~djd809/mvpaGateway.py?help=true "
                 print(json.JSONEncoder().encode(x))
                 quit()
+        else:
+            print "<style>"
+            print "table, th, td { border: 1px solid black;}"
+            print "</style>"
 
 
 
@@ -98,9 +102,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             print(json.JSONEncoder().encode(x))
             quit()
 
-        print "<style>"
-        print "table, th, td { border: 1px solid black;}"
-        print "</style>"
+
 
         if form.has_key("help"):
             if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
