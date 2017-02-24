@@ -94,17 +94,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             print "table, th, td { border: 1px solid black;}"
             print "</style>"
 
-
-
         if mode == 'test':
             x = {}
             x['mvpa'] = 100
             print(json.JSONEncoder().encode(x))
             quit()
 
-
-
-        if form.has_key("help"):
+        if form.has_key("help") and not mode=='api':
             if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
                 print "<h3>MvpaGateway API Help</h3>"
                 print "<table>"
@@ -119,7 +115,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
-
 
         if form.has_key("uid"):
             uid = form.getvalue("uid")
@@ -145,12 +140,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("days_ago"):
             start_time -= timedelta(form.getvalue("days_ago"), 0)
 
-
-
-
         try:
-
-
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
             bucketLib.buildOutMissingValues(buckets)
@@ -179,12 +169,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "</table>"
 
             if mode =='api':
-                if (request =='mvpa'):
+                if request =='mvpa':
                     x = {}
                     x['mvpa'] = mvpa_sum
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
                     print (json.JSONEncoder().encode(buckets))
+                    print "adsfasf"
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
