@@ -183,9 +183,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     x['mvpa'] = mvpa_sum
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
+                    for bucket in bucket:
+                        print (json.JSONEncoder().encode(bucket.__dict__))
 
-                    print 'here asdf'
-                    print (json.JSONEncoder().encode(buckets))
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
