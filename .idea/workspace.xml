@@ -24,10 +24,10 @@
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+              <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1487968909000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+                <marker date="1487968955000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -529,10 +529,10 @@
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+          <caret line="100" column="31" lean-forward="false" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1487968909000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
+            <marker date="1487968955000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
           </folding>
         </state>
       </provider>
