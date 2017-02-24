@@ -271,10 +271,10 @@ def getBuckets(start_time, end_time, uid):
 
                 print "</li>"
 
-                print "<ul>"
                 print "<li>"
                 print "start bucket "
                 print "</li>"
+                print "<ul>"
                 print "<li>"
                 print "startSeconds: " + str(start_time)
                 print "</li>"
@@ -284,6 +284,7 @@ def getBuckets(start_time, end_time, uid):
                 print "<li>"
                 print "value: " + str(value)
                 print "</li>"
+                print "</ul>"
 
 
 
@@ -293,11 +294,10 @@ def getBuckets(start_time, end_time, uid):
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
 
 
-
-                print "<ul>"
                 print "<li>"
                 print "end bucket "
                 print "</li>"
+                print "<ul>"
                 print "<li>"
                 print "startseconds: " + str(buckets[end_bucket].start_time)
                 print "</li>"
@@ -307,6 +307,7 @@ def getBuckets(start_time, end_time, uid):
                 print "<li>"
                 print "value: " + str(value * endSeconds / totalSeconds)
                 print "</li>"
+                print "</ul>"
 
 
                 print "</ul>"
