@@ -188,7 +188,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     for bucket in buckets:
                         obj = {}
                         obj['mvpa'] = mvpa_sum
-                        x.append(obj)
+                        x.append(bucket)
                     print (json.JSONEncoder().encode(x))
 
 
