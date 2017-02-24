@@ -447,7 +447,7 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     print "</li>"
 
     print "<li>"
-    print buckets[bucketNumber].average
+    print buckets[bucketNumber].heart_rate
     print "</li>"
 
     print "<li>"
@@ -457,7 +457,7 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
 
 
 
-    current_avg = buckets[bucketNumber].average
+    current_avg = buckets[bucketNumber].heart_rate
 
     print "<li>"
     print "got current_avg"
@@ -469,6 +469,6 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     else:
         new_avg = value
 
-    set(buckets[bucketNumber], attribute, value)
+    buckets[bucketNumber].heart_rate = new_avg
 
     print "</ul>"
