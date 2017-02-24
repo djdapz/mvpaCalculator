@@ -97,7 +97,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 quit()
         else:
             print "<style>"
-            print "table, th, td { border: 1px solid black;}"
+            print "table{border - collapse: collapse;width: 100 %;}"
+            print "th, td{text - align: left;padding: 8px;}"
+            print "tr:nth - child(even){background - color:  # f2f2f2}"
+            print "th {background - color:  # 4CAF50;color: white;}"
             print "</style>"
 
 
@@ -183,7 +186,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     x['mvpa'] = mvpa_sum
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
-                    # for bucket in bucket:
                     objects = []
                     for bucket in buckets:
                         x = {}
@@ -197,19 +199,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         x['end_time'] = str(bucket.end_time)
                         objects.append(x)
                     print (json.JSONEncoder().encode(objects))
-
-
-
-                    # x['mvpa_guess'] = str(bucket.mvpa_guess)
-                    # x['heart_rate'] = str(bucket.heart_rate)
-                    # x['hr_max'] = str(bucket.hr_max)
-                    # x['hr_min'] = str(bucket.hr_min)
-                    # x['calories'] = str(bucket.calories)
-                    # x['steps'] = str(bucket.steps)
-                    # x['start_time'] = str(bucket.start_time)
-                    # x['end_time'] = str(bucket.end_time)
-                    #
-                    # print (json.JSONEncoder().encode(x))
 
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
