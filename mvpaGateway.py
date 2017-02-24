@@ -195,7 +195,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         x['start_time'] = str(bucket.mvpa_guess)
                         x['end_time'] = bucket.mvpa
 
-                        print (json.JSONEncoder().encode(bucket.__dict__))
+                        print (json.JSONEncoder().encode(x))
 
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
