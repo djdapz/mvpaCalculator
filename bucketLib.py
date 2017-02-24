@@ -429,6 +429,10 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
 
     current_avg = getattr(buckets[bucketNumber], attribute)
 
+    print "<li>"
+    print "done conditionals"
+    print "</li>"
+
     if (current_avg):
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
     else:
