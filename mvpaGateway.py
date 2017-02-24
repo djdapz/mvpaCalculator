@@ -81,6 +81,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         else:
             print 'Content-type: text/html\n\n'
 
+        if mode == 'test':
+            x = {}
+            x['mvpa'] = 100
+            print(json.JSONEncoder().encode(x))
+            print "hooplah"
+            quit()
+
         if mode == 'api':
             if form.has_key("request"):
                 request = form.getvalue("request")
@@ -94,11 +101,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             print "table, th, td { border: 1px solid black;}"
             print "</style>"
 
-        if mode == 'test':
-            x = {}
-            x['mvpa'] = 100
-            print(json.JSONEncoder().encode(x))
-            quit()
+
 
         if form.has_key("help") and not mode=='api':
             if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
@@ -175,7 +178,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
                     print (json.JSONEncoder().encode(buckets))
-                    print "adsfasf"
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
