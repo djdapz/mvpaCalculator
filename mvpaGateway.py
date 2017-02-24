@@ -185,17 +185,19 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 elif request == 'buckets':
                     for bucket in bucket:
                         x = {}
-
-                        x['mvpa_guess'] = str(bucket.mvpa_guess)
-                        x['heart_rate'] = str(bucket.heart_rate)
-                        x['hr_max'] = str(bucket.hr_max)
-                        x['hr_min'] = str(bucket.hr_min)
-                        x['calories'] = str(bucket.mvpa_guess)
-                        x['steps'] = str(bucket.mvpa_guess)
-                        x['start_time'] = str(bucket.mvpa_guess)
-                        x['end_time'] = bucket.mvpa
-
+                        x['mvpa'] = mvpa_sum
                         print (json.JSONEncoder().encode(x))
+
+                        # x['mvpa_guess'] = str(bucket.mvpa_guess)
+                        # x['heart_rate'] = str(bucket.heart_rate)
+                        # x['hr_max'] = str(bucket.hr_max)
+                        # x['hr_min'] = str(bucket.hr_min)
+                        # x['calories'] = str(bucket.calories)
+                        # x['steps'] = str(bucket.steps)
+                        # x['start_time'] = str(bucket.start_time)
+                        # x['end_time'] = str(bucket.end_time)
+                        #
+                        # print (json.JSONEncoder().encode(x))
 
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
