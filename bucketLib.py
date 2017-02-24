@@ -296,6 +296,12 @@ def getBuckets(start_time, end_time, uid):
                     print "</li>"
                     print "<ul>"
                     print "<li>"
+                    print "middleBuckets: " + str(middleBuckets)
+                    print "</li>"
+                    print "<li>"
+                    print "totalSeconds: " + str(totalSeconds)
+                    print "</li>"
+                    print "<li>"
                     print "startseconds: " + str(buckets[i].start_time)
                     print "</li>"
                     print "<li>"
