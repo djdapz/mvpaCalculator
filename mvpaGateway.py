@@ -56,6 +56,8 @@ if os.environ['REQUEST_METHOD'] == 'POST':
 elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
+
+
         mode = "csv"
         uid = "Fahad"
         now = datetime.now()
@@ -63,12 +65,20 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         end_time = now
         start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
         special_dates = None
-        print "<style>"
-        print "table, th, td { border: 1px solid black;}"
-        print "</style>"
+
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
+
+        if mode == 'test':
+            x = {}
+            x['mvpa'] = 100
+            print x
+            quit()
+
+        print "<style>"
+        print "table, th, td { border: 1px solid black;}"
+        print "</style>"
 
         if form.has_key("help"):
             if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
