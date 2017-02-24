@@ -238,7 +238,6 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
         print row[4]
         print "</li>"
 
-        print "</ul>"
 
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
@@ -350,7 +349,7 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
                 print "same"
                 print "</li>"
 
-                print "</ul>"
+
                 # if they're in the same bucket we have to average
                 setAverageBucketValue(buckets, interval, start_bucket, key, value, start_interval, end_interval)
 
@@ -365,9 +364,12 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
                     for i in range(start_bucket + 1, end_bucket):  # Exclude start and end indeces
                         setAverageBucketValue(buckets, interval, i, key, value,  buckets[i].start_time, buckets[i].end_time)
 
-
+            print "</ul>"
         else:
             print "ERROR ERROR ERROR, we encountered an unhandled category:     " + row[3]
+
+
+        print "</ul>"
     return buckets
 
 
@@ -400,7 +402,11 @@ def incrementBucket(buckets, value, bucket, attribute):
 def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, start_time, end_time):
     #note start and end time are for the times IN THE BUCKET
 
+    print "<ul>"
 
+    print "<li>"
+    print "setting average"
+    print "</li>"
     bucket_start = buckets[bucketNumber].start_time
     bucket_end = buckets[bucketNumber].end_time
 
@@ -429,3 +435,5 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
         new_avg = value
 
     set(buckets[bucketNumber], attribute, value)
+
+    print "</ul>"
