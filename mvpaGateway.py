@@ -99,8 +99,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             print "<style>"
             print "table{border - collapse: collapse;width: 100 %;}"
             print "th, td{text - align: left;padding: 8px;}"
-            print "tr:nth-child(even){background - color:  # f2f2f2}"
-            print "th {background - color:  #4CAF50;color: white;}"
+            print "tr:nth-child(even){background - color:  grey}"
+            print "th {background - color: green;color: white;}"
             print "</style>"
 
 
