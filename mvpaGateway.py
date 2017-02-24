@@ -145,8 +145,11 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         try:
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
+            print start_time
+            print end_time
+            print uid
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
-            print 'here'
+
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
