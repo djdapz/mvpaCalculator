@@ -424,14 +424,22 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     elif (end_time == bucket_end):
         percentage = float((bucket_end - start_time).seconds) / float(interval * 60)
 
+    print "<li>"
+    print "done conditionals"
+    print "</li>"
+
     percentage = float((end_time - start_time).seconds) / float(interval * 60)
 
+    print "<li>"
+    print "cot percentage"
+    print "</li>"
 
     current_avg = getattr(buckets[bucketNumber], attribute)
 
     print "<li>"
-    print "done conditionals"
+    print "got current_avg"
     print "</li>"
+
 
     if (current_avg):
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
