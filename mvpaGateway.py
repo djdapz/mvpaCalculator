@@ -142,7 +142,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("days_ago"):
             start_time -= timedelta(form.getvalue("days_ago"), 0)
 
-        print 'here'
         try:
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
@@ -158,6 +157,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             step_sum = 0
             calories_sum = 0
             mvpa_sum = 0
+
+            print 'here'
             for bucket in buckets:
                 if bucket.steps:
                     step_sum += bucket.steps
