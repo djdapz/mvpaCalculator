@@ -9,6 +9,7 @@ import os
 from datetime import datetime
 from datetime import timedelta
 import bucketLib
+import json
 
 #
 # Good grief, we have to generate our own headers?  Crazy.
@@ -80,7 +81,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if mode == 'test':
             x = {}
             x['mvpa'] = 100
-            print x
+            print(json.JSONEncoder().encode(x))
             quit()
 
         print "<style>"
