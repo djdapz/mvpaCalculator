@@ -84,7 +84,6 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if mode == 'test':
             x = {}
             x['mvpa'] = 100
-            print "hooplah"
             print(json.JSONEncoder().encode(x))
             quit()
 
@@ -172,6 +171,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "</table>"
 
             if mode =='api':
+                print 'here'
                 if request =='mvpa':
                     x = {}
                     x['mvpa'] = mvpa_sum
