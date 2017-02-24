@@ -176,8 +176,10 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             if mode == "table":
                 print "</table>"
 
-            if mode =='api':
-                if request =='mvpa':
+            if mode == 'api':
+
+                print 'here'
+                if request == 'mvpa':
                     x = {}
                     x['mvpa'] = mvpa_sum
                     print (json.JSONEncoder().encode(x))
