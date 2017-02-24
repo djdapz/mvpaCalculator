@@ -216,7 +216,30 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
     i = -1
     for row in rows:
         i +=1
-        print i
+        print "<ul>"
+
+        print "<li>"
+        print row[0]
+        print "</li>"
+
+        print "<li>"
+        print row[1]
+        print "</li>"
+
+        print "<li>"
+        print row[2]
+        print "</li>"
+
+        print "<li>"
+        print row[3]
+        print "</li>"
+
+        print "<li>"
+        print row[4]
+        print "</li>"
+
+        print "</ul>"
+
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
