@@ -97,9 +97,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             interval = buckets[0].getInterval()
 
             if mode == "table":
-                print "<h3>MVPA TABLE</h3>"
-                print "<table>"
-            buckets[0].printHeader(mode)
+                # print "<h3>MVPA TABLE</h3>"
+                # print "<table>"
+            # buckets[0].printHeader(mode)
             step_sum = 0
             calories_sum = 0
             mvpa_sum = 0
@@ -110,13 +110,13 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     calories_sum = bucket.calories + calories_sum
                 if bucket.mvpa_guess == True:
                     mvpa_sum += interval
-                bucket.printRow(mode)
+                # bucket.printRow(mode)
             if mode == "table":
                 print "</table>"
 
-            print "<h2>calories sum: " + str(calories_sum) + "</h2>"
-            print "<h2>step_sum : " + str(step_sum) + "</h2>"
-            print "<h2>mvpa_sum : " + str(mvpa_sum) + "</h2>"
+            # print "<h2>calories sum: " + str(calories_sum) + "</h2>"
+            # print "<h2>step_sum : " + str(step_sum) + "</h2>"
+            print "mvpa_sum : " + str(mvpa_sum)
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
