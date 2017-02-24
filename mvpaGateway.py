@@ -122,6 +122,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
                 print "mvpa_sum : " + str(mvpa_sum)
+            else:
+                print "mvpa_sum : " + str(mvpa_sum)
+
 
         except mdb.Error, e:
                 print "Error %d = %s<p>" % (e.args[0],e.args[1])
