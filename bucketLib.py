@@ -453,7 +453,7 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
 
 
 
-    current_avg = getattr(buckets[bucketNumber], attribute)
+    current_avg = buckets[bucketNumber].average
 
     print "<li>"
     print "got current_avg"
