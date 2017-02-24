@@ -84,8 +84,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if mode == 'test':
             x = {}
             x['mvpa'] = 100
-            print(json.JSONEncoder().encode(x))
             print "hooplah"
+            print(json.JSONEncoder().encode(x))
             quit()
 
         if mode == 'api':
