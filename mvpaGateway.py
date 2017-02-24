@@ -72,6 +72,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
         if mode == 'test':
             x = {}
+            print "Content-Type: application/json"
+            print
             x['mvpa'] = 100
             print x
             quit()
