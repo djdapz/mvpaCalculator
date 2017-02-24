@@ -66,15 +66,12 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         now = datetime.now()
         #end_time = datetime(now.year, now.month, now.day, 22, 0, 0)
         end_time = now
-        start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
+        start_time = datetime(now.year, now.month, now.day, 5, 0, 0)
         special_dates = None
 
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
-
-
-
 
         if mode == 'api' or mode =='test':
             print 'Content-type: #application/json\n\n'
