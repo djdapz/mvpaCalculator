@@ -73,10 +73,24 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("mode"):
             mode = form.getvalue("mode")
 
+
+
+
         if mode == 'api' or mode =='test':
             print 'Content-type: application/json\n\n'
         else:
             print 'Content-type: text/html\n\n'
+
+        if mode == 'api':
+            if form.has_key("request"):
+                request = form.getvalue("request")
+            else:
+                x = {}
+                x['error'] = "in API mode you need a request field to get data. visit this url for help: http://murphy.wot.eecs.northwestern.edu/~djd809/mvpaGateway.py?help=true "
+                print(json.JSONEncoder().encode(x))
+                quit()
+
+
 
         if mode == 'test':
             x = {}
@@ -95,7 +109,8 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
                 print "<tr><th>QUERY KEY</th><th>REQUIRED</th><th>DEFAULT VALUE</th><th>DETAILS</th></tr>"
                 print "<tr><td>uid</td><td>YES</td><td>'Fahad'</td><td>unique username for query</td></tr>"
-                print "<tr><td>mode</td><td>YES</td><td>csv</td><td><ul><li>mode = 'csv'--> returns csv like data</li><li>model='table'--> Returns HTML Table</li><li>model='mvpa' --> just returns mvpa as a number</li></td></tr>"
+                print "<tr><td>mode</td><td>YES</td><td>csv</td><td><ul><li>mode = 'csv'--> returns csv like data</li><li>model='table'--> Returns HTML Table</li><li>model='api' --> enteres api mode and returns JSON. use request field to specify what you want</li></td></tr>"
+                print "<tr><td>request</td><td>IF MODE = API</td><td>None</td><td><ul><li>request = 'mvpa'--> json with 'mvpa' field</li><li>reuqest='buckets'--> json of all buckets</li><li>model='mvpa' --> just returns mvpa as a number</li></td></tr>"
                 print "<tr><td>special_dates</td><td>no</td><td>None</td><td>non-default date settings - use 'original_testing' to pull table from first testing period</td></tr>"
                 print "<tr><td>start_time</td><td>no</td><td>Current Day at 7AM</td><td>override default start time. format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
                 print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
@@ -143,7 +158,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
                 print "<table>"
-            if not(mode =='mvpa'):
+            if not(mode =='api'):
                 buckets[0].printHeader(mode)
             step_sum = 0
             calories_sum = 0
@@ -156,14 +171,18 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 if bucket.mvpa_guess == True:
                     mvpa_sum += interval
 
-                if not (mode == 'mvpa'):
+                if not (mode == 'api'):
                     bucket.printRow(mode)
             if mode == "table":
                 print "</table>"
 
-
-            if (mode =='mvpa'):
-                print mvpa_sum
+            if mode =='api':
+                if (request =='mvpa'):
+                    x = {}
+                    x['mvpa'] = mvpa_sum
+                    print (json.JSONEncoder().encode(x))
+                elif request == 'buckets':
+                    print (json.JSONEncoder().encode(buckets))
             else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
