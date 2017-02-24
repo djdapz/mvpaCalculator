@@ -189,7 +189,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                         x = {}
                         x['mvpa'] = mvpa_sum
                         objects.append(x)
-                    print (json.JSONEncoder().encode(x))
+                    print (json.JSONEncoder().encode(objects))
 
 
 
