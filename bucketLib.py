@@ -443,7 +443,7 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     print "</li>"
 
     print "<li>"
-    print buckets[bucketNumber]
+    print bucketNumber
     print "</li>"
 
     print "<li>"
