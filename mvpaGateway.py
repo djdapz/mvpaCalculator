@@ -143,6 +143,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             start_time -= timedelta(form.getvalue("days_ago"), 0)
 
         try:
+            print 'here'
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
             bucketLib.buildOutMissingValues(buckets)
@@ -151,7 +152,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
 
 
 
-            print 'here'
+
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
                 print "<table>"
