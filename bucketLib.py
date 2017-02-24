@@ -256,8 +256,14 @@ def getBuckets(start_time, end_time, uid):
 
                 print "<li>"
                 print "totalSeconds: " + str(totalSeconds)
+                print "</li>"
+                print "<li>"
                 print "startSeconds: " + str(startSeconds)
+                print "</li>"
+                print "<li>"
                 print "endSeconds: " + str(endSeconds)
+                print "</li>"
+                print "<li>"
                 print "value: " + str(value)
 
                 print "</li>"
