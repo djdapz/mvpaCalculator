@@ -68,6 +68,21 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("mode"):
             mode = form.getvalue("mode")
 
+        if form.has_key("help"):
+            if form.getvalue("help") == "true" or form.getvalue("help") == "True" or form.getvalue("help") == "1":
+                print "<h3>MvpaGateway API Help</h3>"
+                print "<table>"
+
+                print "<tr><th>QUERY KEY</th><th>REQUIRED</th><th>DEFAULT VALUE</th><th>DETAILS</th></tr>"
+                print "<tr><td>uid</td><td>YES</td><td>'Fahad'</td><td>unique username for query</td></tr>"
+                print "<tr><td>mode</td><td>YES</td><td>csv</td><td>mode = 'csv'--> returns csv like data; model='table'--> Returns HTML Table; model='mvpa' --> just returns mvpa as a number</td></tr>"
+                print "<tr><td>special_dates</td><td>no</td><td>None</td><td>non-default date settings - use 'original_testing' to pull table from first testing period</td></tr>"
+                print "<tr><td>start_time</td><td>no</td><td>Current Day at 7AM</td><td>override default start time. format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
+                print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
+                print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
+                print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
+                print "</table>"
+
 
         if form.has_key("uid"):
             uid = form.getvalue("uid")
@@ -82,7 +97,16 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             start_time = datetime.strptime(form.getvalue("start_time"), '%I:%M:%S %p %b %d, %Y')
 
         if form.has_key("end_time"):
-            start_time = datetime.strptime(form.getvalue("end_time"), '%I:%M:%S %p %b %d, %Y')
+            end_time_key = form.getvalue("end_time")
+            if end_time_key == "10":
+                end_time = datetime(now.year, now.month, now.day, 22, 0, 0)
+            elif end_time_key == "now":
+                end_time = now
+            else:
+                end_time = datetime.strptime(end_time_key, '%I:%M:%S %p %b %d, %Y')
+
+        if form.has_key("days_ago"):
+            start_time -= timedelta(form.getvalue("days_ago"), 0)
 
 
 
@@ -99,7 +123,7 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
                 print "<table>"
-            if not(mode =='api'):
+            if not(mode =='mvpa'):
                 buckets[0].printHeader(mode)
             step_sum = 0
             calories_sum = 0
@@ -112,17 +136,17 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                 if bucket.mvpa_guess == True:
                     mvpa_sum += interval
 
-                if not (mode == 'api'):
+                if not (mode == 'mvpa'):
                     bucket.printRow(mode)
             if mode == "table":
                 print "</table>"
 
 
-            if not(mode =='api'):
+            if (mode =='api'):
+                print mvpa_sum
+            else:
                 print "<h2>calories sum: " + str(calories_sum) + "</h2>"
                 print "<h2>step_sum : " + str(step_sum) + "</h2>"
-                print "mvpa_sum : " + str(mvpa_sum)
-            else:
                 print "mvpa_sum : " + str(mvpa_sum)
 
 

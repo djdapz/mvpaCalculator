@@ -387,11 +387,11 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
     percentage = float((end_time - start_time).seconds) / float(interval * 60)
 
 
-    current_avg = buckets[bucketNumber].heart_rate
+    current_avg = getattr(buckets[bucketNumber], attribute)
 
     if (current_avg):
         new_avg = float(current_avg) * (1 - percentage) + float(value) * percentage
     else:
         new_avg = value
 
-    buckets[bucketNumber].heart_rate = value
+    set(buckets[bucketNumber], attribute, value)
