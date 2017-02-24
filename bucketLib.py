@@ -201,7 +201,7 @@ def getBuckets(start_time, end_time, uid = "Fahad", ):
     rows = cur.fetchall()
 
 
-
+    print 'made it here'
 
     interval = 5  # IN MINUTES
     num_buckets = (end_time - start_time).seconds / (60 * interval) + ((end_time - start_time).days * 24 * 60 * 60 ) / (60 * interval)
