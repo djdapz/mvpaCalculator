@@ -184,6 +184,17 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
                     print (json.JSONEncoder().encode(x))
                 elif request == 'buckets':
                     for bucket in bucket:
+                        x = {}
+
+                        x['mvpa_guess'] = str(bucket.mvpa_guess)
+                        x['heart_rate'] = str(bucket.heart_rate)
+                        x['hr_max'] = str(bucket.hr_max)
+                        x['hr_min'] = str(bucket.hr_min)
+                        x['calories'] = str(bucket.mvpa_guess)
+                        x['steps'] = str(bucket.mvpa_guess)
+                        x['start_time'] = str(bucket.mvpa_guess)
+                        x['end_time'] = bucket.mvpa
+
                         print (json.JSONEncoder().encode(bucket.__dict__))
 
             else:
