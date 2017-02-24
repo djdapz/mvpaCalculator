@@ -63,7 +63,9 @@ elif os.environ['REQUEST_METHOD'] == 'GET':
         end_time = now
         start_time = datetime(now.year, now.month, now.day, 7, 0, 0)
         special_dates = None
-
+        print "<style>"
+        print "table, th, td { border: 1px solid black;}"
+        print "</style>"
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
