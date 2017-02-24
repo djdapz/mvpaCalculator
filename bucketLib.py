@@ -257,21 +257,59 @@ def getBuckets(start_time, end_time, uid):
                 print "<li>"
                 print "totalSeconds: " + str(totalSeconds)
                 print "</li>"
+
                 print "<li>"
                 print "startSeconds: " + str(startSeconds)
                 print "</li>"
+
                 print "<li>"
                 print "endSeconds: " + str(endSeconds)
                 print "</li>"
+
                 print "<li>"
-                print "value: " + str(value)
+                print "value: " + str(value * startSeconds / totalSeconds)
 
                 print "</li>"
 
-                print "</ul>"
+                print "<ul>"
+                print "<li>"
+                print "start bucket "
+                print "</li>"
+                print "<li>"
+                print "startSeconds: " + str(start_time)
+                print "</li>"
+                print "<li>"
+                print "bucketEnd: " + str(buckets[start_bucket].end_time)
+                print "</li>"
+                print "<li>"
+                print "value: " + str(value)
+                print "</li>"
+
+
+
+
+
                 for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
 
+
+
+                print "<ul>"
+                print "<li>"
+                print "end bucket "
+                print "</li>"
+                print "<li>"
+                print "startseconds: " + str(buckets[end_bucket].start_time)
+                print "</li>"
+                print "<li>"
+                print "bucketEnd: " + str(end_time)
+                print "</li>"
+                print "<li>"
+                print "value: " + str(value * endSeconds / totalSeconds)
+                print "</li>"
+
+
+                print "</ul>"
 
         elif row[3] == 'max':
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
