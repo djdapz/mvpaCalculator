@@ -414,6 +414,10 @@ def setAverageBucketValue(buckets, interval, bucketNumber, attribute, value, sta
         print "ERR in setAverageBucketValue      start_time:" + str(start_time) + "    end_time: " +str(end_time) + "     bucketNumber"
         return
 
+    print "<li>"
+    print "starting conditionals"
+    print "</li>"
+
     if(start_time == bucket_start and end_time == bucket_end):
         percentage = 1
     if(start_time > bucket_start and end_time < bucket_end):
