@@ -247,7 +247,7 @@ def getBuckets(start_time, end_time, uid):
                 startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
                 endSeconds= (end_interval - buckets[start_bucket].start_time).seconds
 
-                middleBuckets = (buckets[0].end_time - buckets[0].start_time).seconds * interval * 60
+                middleBuckets = (buckets[0].end_time - buckets[0].start_time).seconds
 
                 incrementBucket(buckets, value * startSeconds / totalSeconds, start_bucket, key)
                 incrementBucket(buckets, value * endSeconds / totalSeconds, end_bucket, key)
