@@ -171,9 +171,9 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                     print (json.JSONEncoder().encode(objects))
 
             else:
-                print "<h2>Total Calories: " + str(calories_sum) + "</h2>"
-                print "<h2>Total Steps : " + str(step_sum) + "</h2>"
-                print "<h2>Total MVPA : " + str(mvpa_sum)+ "</h2>"
+                print "<h2>calories sum: " + str(calories_sum) + "</h2>"
+                print "<h2>step_sum : " + str(step_sum) + "</h2>"
+                print "<h2>mvpa_sum : " + str(mvpa_sum)+ "</h2>"
 
 
         except mdb.Error, e:
