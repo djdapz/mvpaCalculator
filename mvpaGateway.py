@@ -20,42 +20,8 @@ form = cgi.FieldStorage()
 
 con = None
 
-if os.environ['REQUEST_METHOD'] == 'POST':
-        print 'Content-type: text/html\n\n'
-        print "Post request received."
 
-        # Create SQL entry
-        try:
-                print "Connecting to db..."
-                con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
-                print "Connected."
-                print "Time: " + str(form.getvalue("time"))
-                # NOTE: the query string puts the mac address and time
-                # parameter in single quotes. Do NOT put the mac parameter
-                # in single quotes or the syntax will fail.
-                # TODO: sanitize data inputs to avoid injection
-                queryString = "INSERT INTO djd_user_goals (" +\
-                    "user_id, goal, achieved, day" +\
-                    ") VALUES (" +\
-                    "'" + str(form.getvalue("user_id")) + "', " +\
-                    str(form.getvalue("goal")) +", " +\
-                    str(form.getvalue("achieved")) +\
-                    str(form.getvalue("goal")) +", " +\
-                ");"
-
-                cur = con.cursor()
-                print "Executing: " + queryString
-                cur.execute(queryString)
-                print "Executed."
-
-        except mdb.Error, e:
-                print "Error connecting or executing query string."
-                print e
-        finally:
-                if con:
-                        con.close()
-
-elif os.environ['REQUEST_METHOD'] == 'GET':
+if os.environ['REQUEST_METHOD'] == 'GET':
 
 
 
