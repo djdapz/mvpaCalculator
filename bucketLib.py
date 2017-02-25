@@ -125,14 +125,12 @@ def labelBuckets(buckets):
         # if p > .5 ==> true
         if bucket.steps > steps_threshold:
             bucket.mvpa_guess = True
-        elif bucket.calories and bucket.calories > calories_threshold:
+        elif bucket.calories > calories_threshold:
             bucket.mvpa_guess = True
-        elif bucket.hr_max and bucket.hr_max > hr_threshold:
+        elif (bucket.hr_max > hr_threshold) or (bucket.hr_min > hr_threshold) or (bucket.heart_rate > hr_threshold):
+            if (bucket.calories > calories_threshold / 1.5) or (bucket.steps > steps_threshold / 2):
             bucket.mvpa_guess = True
-        elif bucket.hr_min and bucket.hr_min > hr_threshold:
-            bucket.mvpa_guess = True
-        elif bucket.heart_rate and bucket.heart_rate > hr_threshold:
-            bucket.mvpa_guess = True
+
 
 def buildOutMissingValues(buckets):
     base_calories_per_minute = 6.08333 / 5
