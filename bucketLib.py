@@ -129,7 +129,7 @@ def labelBuckets(buckets):
             bucket.mvpa_guess = True
         elif (bucket.hr_max > hr_threshold) or (bucket.hr_min > hr_threshold) or (bucket.heart_rate > hr_threshold):
             if (bucket.calories > calories_threshold / 1.5) or (bucket.steps > steps_threshold / 2):
-            bucket.mvpa_guess = True
+                bucket.mvpa_guess = True
 
 
 def buildOutMissingValues(buckets):

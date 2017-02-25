@@ -23,8 +23,8 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="96" column="34" lean-forward="false" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+            <state relative-caret-position="1826">
+              <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
                 <marker date="1487979454000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
@@ -36,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="131" column="36" lean-forward="false" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
+            <state relative-caret-position="211">
+              <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487981193000" expanded="true" signature="5816:5873" ph="select disti... raw_fit" />
+                <marker date="1487981266000" expanded="true" signature="5820:5877" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -90,10 +90,10 @@
       <find>&lt;/td&gt;</find>
       <find>setattr</find>
       <find>&quot;, &quot;</find>
-      <find>days</find>
       <find>select</find>
-      <find>print</find>
       <find>label</find>
+      <find>days</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -413,7 +413,7 @@
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21388888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -518,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="96" column="34" lean-forward="false" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+        <state relative-caret-position="1826">
+          <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
             <marker date="1487979454000" expanded="true" signature="1000:1374" ph="INSERT INTO djd_user_goals... " />
@@ -529,11 +529,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="131" column="36" lean-forward="false" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="36" />
+        <state relative-caret-position="211">
+          <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487981193000" expanded="true" signature="5816:5873" ph="select disti... raw_fit" />
+            <marker date="1487981266000" expanded="true" signature="5820:5877" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>
