@@ -61,7 +61,11 @@ if os.environ['REQUEST_METHOD'] == 'GET':
         else:
             print "<style>"
             print "body {font-family: 'Verdana', Geneva, sans-serif;}"
-            print "table{border-collapse: collapse;width: 100 %;border: 3px solid #6f2a92;}"
+            print "h1 {text-align:center}"
+            print "h2 {text-align:center}"
+            print "h3 {text-align:center}"
+            print "h4 {text-align:center}"
+            print "table{margin-left:auto; margin-right:auto;border-collapse: collapse;width: 100 %;border: 3px solid #6f2a92;}"
             print "th, td{text-align: left;padding: 8px;}"
             print "tr:nth-child(even){background-color:  #f2f2f2}"
             print "th {background-color: #6f2a92;color: white;}"
