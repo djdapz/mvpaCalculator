@@ -36,11 +36,11 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="249" column="85" lean-forward="false" selection-start-line="249" selection-start-column="85" selection-end-line="249" selection-end-column="85" />
+            <state relative-caret-position="-135">
+              <caret line="246" column="88" lean-forward="true" selection-start-line="246" selection-start-column="88" selection-end-line="246" selection-end-column="88" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
-                <marker date="1487980715000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
+                <marker date="1487980809000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
               </folding>
             </state>
           </provider>
@@ -89,10 +89,10 @@
       <find>g</find>
       <find>&lt;/td&gt;</find>
       <find>setattr</find>
-      <find>days</find>
       <find>&quot;, &quot;</find>
-      <find>select</find>
       <find>print</find>
+      <find>select</find>
+      <find>days</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -119,9 +119,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="720" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -410,7 +409,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -506,16 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2420">
@@ -527,13 +516,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="249" column="85" lean-forward="false" selection-start-line="249" selection-start-column="85" selection-end-line="249" selection-end-column="85" />
+        <state relative-caret-position="-135">
+          <caret line="246" column="88" lean-forward="true" selection-start-line="246" selection-start-column="88" selection-end-line="246" selection-end-column="88" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
-            <marker date="1487980715000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
+            <marker date="1487980809000" expanded="true" signature="5881:5938" ph="select disti... raw_fit" />
           </folding>
         </state>
       </provider>

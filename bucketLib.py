@@ -251,86 +251,13 @@ def getBuckets(start_time, end_time, uid):
 
                 incrementBucket(buckets, value * startSeconds / totalSeconds, start_bucket, key)
                 incrementBucket(buckets, value * endSeconds / totalSeconds, end_bucket, key)
-                print "here"
-                print "<ul>"
-
-                print "<li>"
-                print "totalSeconds: " + str(totalSeconds)
-                print "</li>"
-
-                print "<li>"
-                print "startSeconds: " + str(startSeconds)
-                print "</li>"
-
-                print "<li>"
-                print "endSeconds: " + str(endSeconds)
-                print "</li>"
-
-                print "<li>"
-                print "value: " + str(value)
-
-                print "</li>"
-
-                print "<li>"
-                print "start bucket "
-                print "</li>"
-                print "<ul>"
-                print "<li>"
-                print "startSeconds: " + str(start_time)
-                print "</li>"
-                print "<li>"
-                print "bucketEnd: " + str(buckets[start_bucket].end_time)
-                print "</li>"
-                print "<li>"
-                print "value: " + str( value * startSeconds / totalSeconds)
-                print "</li>"
-                print "</ul>"
 
 
 
 
 
                 for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
-                    print "<li>"
-                    print "bucket: " + str(i)
-                    print "</li>"
-                    print "<ul>"
-                    print "<li>"
-                    print "middleBuckets: " + str(middleBuckets)
-                    print "</li>"
-                    print "<li>"
-                    print "totalSeconds: " + str(totalSeconds)
-                    print "</li>"
-                    print "<li>"
-                    print "startseconds: " + str(buckets[i].start_time)
-                    print "</li>"
-                    print "<li>"
-                    print "bucketEnd: " + str(buckets[i].end_time)
-                    print "</li>"
-                    print "<li>"
-                    print "value: " + str(value * middleBuckets / totalSeconds)
-                    print "</li>"
-                    print "</ul>"
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
-
-
-                print "<li>"
-                print "end bucket "
-                print "</li>"
-                print "<ul>"
-                print "<li>"
-                print "startseconds: " + str(buckets[end_bucket].start_time)
-                print "</li>"
-                print "<li>"
-                print "bucketEnd: " + str(end_time)
-                print "</li>"
-                print "<li>"
-                print "value: " + str(value * endSeconds / totalSeconds)
-                print "</li>"
-                print "</ul>"
-
-
-                print "</ul>"
 
         elif row[3] == 'max':
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
