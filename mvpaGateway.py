@@ -117,7 +117,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
-
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
@@ -171,9 +170,9 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                     print (json.JSONEncoder().encode(objects))
 
             else:
-                print "<h2>calories sum: " + str(calories_sum) + "</h2>"
-                print "<h2>step_sum : " + str(step_sum) + "</h2>"
-                print "<h2>mvpa_sum : " + str(mvpa_sum)+ "</h2>"
+                print "<h2>Calories : " + str(calories_sum) + "</h2>"
+                print "<h2>Steps : " + str(step_sum) + "</h2>"
+                print "<h2>MVPA : " + str(mvpa_sum)+ "</h2>"
 
 
         except mdb.Error, e:
