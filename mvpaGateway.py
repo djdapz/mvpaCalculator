@@ -147,7 +147,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
                 x = {}
                 if form.has_key("post"):
-                    post = form.getvalue("mode")
+                    post = form.getvalue("post")
                     if post == 'True' or post == 'true':
                         if form.has_key("goal"):
                             goal = form.getvalue("goal")
