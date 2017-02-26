@@ -23,14 +23,14 @@
       <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="155" column="42" lean-forward="true" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
+            <state relative-caret-position="326">
+              <caret line="156" column="33" lean-forward="true" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1488151463000" expanded="true" signature="6740:6893" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488151463000" expanded="true" signature="6740:6898" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488151463000" expanded="true" signature="6740:6957" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488151463000" expanded="true" signature="6740:7155" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488151570000" expanded="true" signature="6876:7029" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488151570000" expanded="true" signature="6876:7034" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488151570000" expanded="true" signature="6876:7093" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488151570000" expanded="true" signature="6876:7291" ph="INSERT INTO fit_user_goals... " />
               </folding>
             </state>
           </provider>
@@ -39,8 +39,8 @@
       <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+            <state relative-caret-position="249">
+              <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="194" selection-end-column="22" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
                 <marker date="1487981266000" expanded="true" signature="5820:5877" ph="select disti... raw_fit" />
@@ -97,6 +97,7 @@
       <find>label</find>
       <find>days</find>
       <find>print</find>
+      <find>con</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -123,9 +124,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="720" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -420,10 +420,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="873" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42777777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21388888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -528,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="131" column="16" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+        <state relative-caret-position="249">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="194" selection-end-column="22" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
             <marker date="1487981266000" expanded="true" signature="5820:5877" ph="select disti... raw_fit" />
@@ -539,14 +539,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="155" column="42" lean-forward="true" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
+        <state relative-caret-position="326">
+          <caret line="156" column="33" lean-forward="true" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1488151463000" expanded="true" signature="6740:6893" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488151463000" expanded="true" signature="6740:6898" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488151463000" expanded="true" signature="6740:6957" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488151463000" expanded="true" signature="6740:7155" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488151570000" expanded="true" signature="6876:7029" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488151570000" expanded="true" signature="6876:7034" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488151570000" expanded="true" signature="6876:7093" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488151570000" expanded="true" signature="6876:7291" ph="INSERT INTO fit_user_goals... " />
           </folding>
         </state>
       </provider>

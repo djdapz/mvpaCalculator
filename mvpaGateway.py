@@ -155,6 +155,9 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                         else:
                             goal = "UNDEF"
                             x['post'] = "POSTED, but goal not provided by request"
+
+                        con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
+                        cur = con.cursor()
                         queryString = "INSERT INTO fit_user_goals (" + \
                                       "user_id, goal, mvpa, date" + \
                                       ") VALUES (" + \
