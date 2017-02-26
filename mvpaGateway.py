@@ -22,11 +22,6 @@ con = None
 
 
 if os.environ['REQUEST_METHOD'] == 'GET':
-
-
-
-
-
         mode = "table"
         uid = "Fahad"
         now = datetime.now()
@@ -34,7 +29,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
         end_time = now
         start_time = datetime(now.year, now.month, now.day, 5, 0, 0)
         special_dates = None
-
 
         if form.has_key("mode"):
             mode = form.getvalue("mode")
@@ -58,6 +52,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 x['error'] = "in API mode you need a request field to get data. visit this url for help: http://murphy.wot.eecs.northwestern.edu/~djd809/mvpaGateway.py?help=true "
                 print(json.JSONEncoder().encode(x))
                 quit()
+
         else:
             print "<style>"
             print "body {font-family: 'Verdana', Geneva, sans-serif;}"
@@ -82,6 +77,8 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>uid</td><td>YES</td><td>'Fahad'</td><td>unique username for query</td></tr>"
                 print "<tr><td>mode</td><td>YES</td><td>table</td><td><ul><li>mode = 'csv'--> returns csv like data</li><li>model='table'--> Returns HTML Table</li><li>model='api' --> enteres api mode and returns JSON. use request field to specify what you want</li></td></tr>"
                 print "<tr><td>request</td><td>IF MODE = API</td><td>None</td><td><ul><li>request = 'mvpa'--> json with 'mvpa' field</li><li>reuqest='buckets'--> json of all buckets</li></td></tr>"
+                print "<tr><td>post</td><td>no</td><td>False</td><td>Set to True or true if you want the query to post to the goals-achieved table</td></tr>"
+                print "<tr><td>goal</td><td>YES - IF post == true</td><td>undefined</td><td>User's goal for the day</td></tr>"
                 print "<tr><td>special_dates</td><td>no</td><td>None</td><td>non-default date settings - use 'original_testing' to pull table from first testing period</td></tr>"
                 print "<tr><td>start_time</td><td>no</td><td>Current Day at 7AM</td><td>override default start time. format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
                 print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
@@ -148,8 +145,28 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
             if mode == 'api':
 
+                x = {}
+                if form.has_key("post"):
+                    post = form.getvalue("mode")
+                    if post == 'True' or post == 'true':
+                        if form.has_key("goal"):
+                            goal = form.getvalue("goal")
+                            x['post'] = "SUCCESS"
+                        else:
+                            goal = "UNDEF"
+                            x['post'] = "POSTED, but goal not provided by request"
+                        queryString = "INSERT INTO fit_user_goals (" + \
+                                      "user_id, goal, mvpa, date" + \
+                                      ") VALUES (" + \
+                                      "'" + str(uid) + "'," + \
+                                      "'" + str(goal) + "'," + \
+                                      "'" + str(mvpa_sum) + "'," + \
+                                      "'" + str(now) + "');"
+                        cur = con.cursor()
+                        cur.execute(queryString)
+
+
                 if request == 'mvpa':
-                    x = {}
                     x['mvpa'] = mvpa_sum
                     x['calories_sum']=calories_sum
                     x['step_sum']=step_sum
@@ -157,7 +174,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 elif request == 'buckets':
                     objects = []
                     for bucket in buckets:
-                        x = {}
                         x['mvpa_guess'] = str(bucket.mvpa_guess)
                         x['heart_rate'] = str(bucket.heart_rate)
                         x['hr_max'] = str(bucket.hr_max)
@@ -169,10 +185,18 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                         objects.append(x)
                     print (json.JSONEncoder().encode(objects))
 
+
+
+
+
+
             else:
                 print "<h2>Calories : " + str(calories_sum) + "</h2>"
                 print "<h2>Steps : " + str(step_sum) + "</h2>"
                 print "<h2>MVPA : " + str(mvpa_sum)+ "</h2>"
+
+
+
 
 
         except mdb.Error, e:
