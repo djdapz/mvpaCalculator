@@ -159,7 +159,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                         con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
                         cur = con.cursor()
                         queryString = "INSERT INTO fit_user_goals (" + \
-                                      "user_id, goal, mvpa, date" + \
+                                      "uid, goal, mvpa, date" + \
                                       ") VALUES (" + \
                                       "'" + str(uid) + "'," + \
                                       "'" + str(goal) + "'," + \
