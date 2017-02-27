@@ -85,7 +85,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
-
+        print "here"
         if form.has_key("uid"):
             uid = form.getvalue("uid")
 
