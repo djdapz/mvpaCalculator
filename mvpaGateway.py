@@ -123,7 +123,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
         try:
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
-            buckets = bucketLib.getBuckets(start_time, end_time, uid=uid)
+            buckets = bucketLib.getBuckets(start_time, end_time, uid, db)
             bucketLib.buildOutMissingValues(buckets)
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
