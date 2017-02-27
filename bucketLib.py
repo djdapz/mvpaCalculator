@@ -190,12 +190,12 @@ def buildOutMissingValues(buckets):
 
 
 
-def getBuckets(start_time, end_time, uid):
+def getBuckets(start_time, end_time, uid, db):
     con = mdb.connect('localhost', 'mhealth', 'mhealth', 'mhealthplay')
     cur = con.cursor()
 
     #todo get uid
-    cur.execute("select distinct * from test_fit where uid = '"+ uid+"'")
+    cur.execute("select distinct * from "+db+" where uid = '"+ uid+"'")
     rows = cur.fetchall()
 
 
