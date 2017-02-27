@@ -195,7 +195,7 @@ def getBuckets(start_time, end_time, uid):
     cur = con.cursor()
 
     #todo get uid
-    cur.execute("select distinct * from gf_app_test where uid = '"+ uid+"'")
+    cur.execute("select distinct * from gf_test_2 where uid = '"+ uid+"'")
     rows = cur.fetchall()
 
 
