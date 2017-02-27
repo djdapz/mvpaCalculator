@@ -108,8 +108,14 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 end_time = datetime.strptime(end_time_key, '%I:%M:%S %p %b %d, %Y')
 
         if form.has_key("days_ago"):
+            print "START TIME OLD: " + str(start_time)
+            print "END TIME OLD: " + str(end_time)
+
+
             start_time -= timedelta(form.getvalue("days_ago"), 0)
             end_time -= timedelta(form.getvalue("days_ago"), 0)
+            print "START TIME NEW: " + str(start_time)
+            print "END TIME NEW: " + str(end_time)
 
         try:
 
