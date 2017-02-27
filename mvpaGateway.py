@@ -85,7 +85,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
-        print "here"
         if form.has_key("uid"):
             uid = form.getvalue("uid")
 
@@ -108,15 +107,11 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 end_time = datetime.strptime(end_time_key, '%I:%M:%S %p %b %d, %Y')
 
         if form.has_key("days_ago"):
-            print "START TIME OLD: " + str(start_time)
-            print "END TIME OLD: " + str(end_time)
 
             days_ago = timedelta(int(form.getvalue("days_ago"),0))
 
             start_time = start_time - days_ago
             end_time = end_time - days_ago
-            print "START TIME NEW: " + str(start_time)
-            print "END TIME NEW: " + str(end_time)
 
         try:
 

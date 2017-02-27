@@ -115,7 +115,7 @@ class Bucket:
 
 def labelBuckets(buckets):
     interval = buckets[0].getInterval()
-    steps_per_minute_threshold = 45
+    steps_per_minute_threshold = 80
     steps_threshold = interval * steps_per_minute_threshold
     base_calories_per_minute = 6.08333/5
     calories_threshold = interval * base_calories_per_minute * 2
