@@ -109,6 +109,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key("days_ago"):
             start_time -= timedelta(form.getvalue("days_ago"), 0)
+            end_time -= timedelta(form.getvalue("days_ago"), 0)
 
         try:
 
