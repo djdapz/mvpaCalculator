@@ -111,7 +111,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             print "START TIME OLD: " + str(start_time)
             print "END TIME OLD: " + str(end_time)
 
-            days_ago = form.getvalue("days_ago")
+            days_ago = timedelta(int(form.getvalue("days_ago"),0))
 
             start_time = start_time - days_ago
             end_time = end_time - days_ago
