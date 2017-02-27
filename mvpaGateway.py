@@ -99,8 +99,8 @@ if os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("start_time"):
             start_time = datetime.strptime(form.getvalue("start_time"), '%I:%M:%S %p %b %d, %Y')
 
-        if form.has_key("mode"):
-            db = form.getvalue("mode")
+        if form.has_key("db"):
+            db = form.getvalue("db")
         else:
             db = 'test_fit'
 
