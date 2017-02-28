@@ -90,7 +90,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key("uid"):
             uid = form.getvalue("uid")
-        print "HERE"
         if form.has_key('special_dates'):
             special_dates = form.getvalue("special_dates")
             if special_dates == "original_testing":
@@ -130,8 +129,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             bucketLib.labelBuckets(buckets)
             interval = buckets[0].getInterval()
 
-
-
+            print "made it thorugh bucketing"
 
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
