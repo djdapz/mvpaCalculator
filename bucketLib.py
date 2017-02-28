@@ -212,9 +212,10 @@ def getBuckets(start_time, end_time, uid, db):
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
-
+    i = -1
     for row in rows:
-
+        i = i+1
+        print i
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
