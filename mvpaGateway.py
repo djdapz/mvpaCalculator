@@ -120,6 +120,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
             start_time = start_time - days_ago
             end_time = end_time - days_ago
+        print "also here"
 
         try:
 
