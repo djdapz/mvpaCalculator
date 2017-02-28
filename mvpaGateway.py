@@ -44,7 +44,6 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             print(json.JSONEncoder().encode(x))
             quit()
 
-
         if mode == 'api':
             if form.has_key("request"):
                 request = form.getvalue("request")
@@ -87,9 +86,11 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
+
+
         if form.has_key("uid"):
             uid = form.getvalue("uid")
-
+        print "HERE"
         if form.has_key('special_dates'):
             special_dates = form.getvalue("special_dates")
             if special_dates == "original_testing":

@@ -13,7 +13,7 @@ from datetime import timedelta
 class Bucket:
 
     def __init__(self, start_time, interval):
-        #NOTE INTERVAL MUST BE IN MINUTES
+        #NOTE INTERVAL MUST BE IN MINUTESfi
         self.start_time = start_time
         self.end_time = start_time + timedelta(0, interval*60)
         self.heart_rate = None

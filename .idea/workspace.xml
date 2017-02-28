@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa831f43-d89c-4980-95f8-6a3dda29690e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bucketLib.py" afterPath="$PROJECT_DIR$/bucketLib.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mvpaGateway.py" afterPath="$PROJECT_DIR$/mvpaGateway.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,27 +21,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mvpaGateway.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="27" column="68" lean-forward="true" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="167">
+              <caret line="92" column="20" lean-forward="false" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
-                <marker date="1488241459000" expanded="true" signature="7185:7334" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488241459000" expanded="true" signature="7185:7339" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488241459000" expanded="true" signature="7185:7398" ph="INSERT INTO fit_user_goals... " />
-                <marker date="1488241459000" expanded="true" signature="7185:7596" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488312692000" expanded="true" signature="7206:7355" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488312692000" expanded="true" signature="7206:7360" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488312692000" expanded="true" signature="7206:7419" ph="INSERT INTO fit_user_goals... " />
+                <marker date="1488312692000" expanded="true" signature="7206:7617" ph="INSERT INTO fit_user_goals... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bucketLib.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bucketLib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+            <state relative-caret-position="-2220">
+              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding>
                 <element signature="e#29#50#0" expanded="true" />
               </folding>
@@ -100,6 +101,8 @@
       <find>days-ago</find>
       <find>post</find>
       <find>end_time</find>
+      <find>db</find>
+      <find>test</find>
     </findStrings>
     <replaceStrings>
       <replace>hr_max</replace>
@@ -114,8 +117,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/mvpaGateway.py" />
         <option value="$PROJECT_DIR$/bucketLib.py" />
+        <option value="$PROJECT_DIR$/mvpaGateway.py" />
       </list>
     </option>
   </component>
@@ -508,10 +511,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1488241459000" expanded="true" signature="7185:7334" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7339" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7398" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7596" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7355" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7360" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7419" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7617" ph="INSERT INTO fit_user_goals... " />
           </folding>
         </state>
       </provider>
@@ -558,10 +561,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1488241459000" expanded="true" signature="7185:7334" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7339" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7398" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7596" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7355" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7360" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7419" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7617" ph="INSERT INTO fit_user_goals... " />
           </folding>
         </state>
       </provider>
@@ -608,10 +611,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#47#68#0" expanded="true" />
-            <marker date="1488241459000" expanded="true" signature="7185:7334" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7339" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7398" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7596" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7355" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7360" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7419" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7617" ph="INSERT INTO fit_user_goals... " />
           </folding>
         </state>
       </provider>
@@ -652,20 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="27" column="68" lean-forward="true" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-          <folding>
-            <element signature="e#47#68#0" expanded="true" />
-            <marker date="1488241459000" expanded="true" signature="7185:7334" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7339" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7398" ph="INSERT INTO fit_user_goals... " />
-            <marker date="1488241459000" expanded="true" signature="7185:7596" ph="INSERT INTO fit_user_goals... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -694,10 +683,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bucketLib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="177" column="0" lean-forward="true" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        <state relative-caret-position="-2220">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="e#29#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvpaGateway.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="92" column="20" lean-forward="false" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="e#47#68#0" expanded="true" />
+            <marker date="1488312692000" expanded="true" signature="7206:7355" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7360" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7419" ph="INSERT INTO fit_user_goals... " />
+            <marker date="1488312692000" expanded="true" signature="7206:7617" ph="INSERT INTO fit_user_goals... " />
           </folding>
         </state>
       </provider>
