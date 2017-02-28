@@ -125,11 +125,13 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid, db)
+            print "bucketed"
             bucketLib.buildOutMissingValues(buckets)
+            print "built out"
             bucketLib.labelBuckets(buckets)
+            print "labeled"
             interval = buckets[0].getInterval()
 
-            print "made it thorugh bucketing"
 
             if mode == "table":
                 print "<h3>MVPA TABLE</h3>"
