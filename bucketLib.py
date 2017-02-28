@@ -266,13 +266,28 @@ def getBuckets(start_time, end_time, uid, db):
                 print ":s=e+1"
                 print "</li>"
                 totalSeconds = float((end_interval - start_interval).seconds)
+                print "<li>"
+                print "totalSeconds ok"
+                print "</li>"
                 percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
+                print "<li>"
+                print "percentageStart ok"
+                print "</li>"
                 percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
                 print "<li>"
-                print "precentages ok"
+                print "percentageEnd ok"
                 print "</li>"
+
                 incrementBucket(buckets, value*percentageStart, start_bucket, key)
+                print "<li>"
+                print "inc1 ok"
+                print "</li>"
+
                 incrementBucket(buckets, value*percentageEnd, end_bucket, key)
+                print "<li>"
+                print "inc2 ok"
+                print "</li>"
+
             else:
                 print "<li>"
                 print":s>>e"
