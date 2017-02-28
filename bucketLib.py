@@ -205,18 +205,15 @@ def getBuckets(start_time, end_time, uid, db):
 
 
     interval = 5  # IN MINUTES
-    num_buckets = (end_time - start_time).seconds / (60 * interval) + ((end_time - start_time).days * 24 * 60 * 60 ) / (60 * interval)
+    num_buckets = ((end_time - start_time).seconds / (60 * interval) + ((end_time - start_time).days * 24 * 60 * 60 ) / (60 * interval)) + 1 #+1 for safety
     buckets = []
 
     iterating_time = start_time
     for num in range(num_buckets):
         buckets.append(Bucket(iterating_time, interval))
         iterating_time += timedelta(0, interval * 60)
-    i = -1
+
     for row in rows:
-        i = i+1
-        print '              '
-        print i
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
         end_interval  = datetime.strptime(row[2], '%I:%M:%S %p %b %d, %Y')
@@ -228,86 +225,67 @@ def getBuckets(start_time, end_time, uid, db):
 
         #handle calories
         if row[3] == 'calories' or row[3] =='steps':
-            print "<ul>"
-            print "<li>"
-            print "num_buckets: " + str(len(buckets))
-            print "</li>"
-            print "<li>"
-            print "start_interval: " + str(start_interval)
-            print "</li>"
-            print "<li>"
-            print "end_interval: " + str(end_interval)
-            print "</li>"
-            print "<li>"
-            print "start_bucket: " + str(start_bucket)
-            print "</li>"
-            print "<li>"
-            print "start_bucket-start_time: " + str(buckets[start_bucket].start_time)
-            print "</li>"
-            print "<li>"
-            print "start_bucket-end_time: " +str(buckets[start_bucket].end_time)
-            print "</li>"
-            print "<li>"
-            print "end_bucket: " + str(end_bucket)
-            print "</li>"
-            print "<li>"
-            print "end_bucket-start_time: " + str(buckets[end_bucket].start_time)
-            print "</li>"
-            print "<li>"
-            print "end_bucket-end_time: " +str(buckets[end_bucket].end_time)
-            print "</li>"
-            print "<li>"
-            print "key: " + str(row[3])
-            print "</li>"
-            print "<li>"
-            print "value: " + str(row[4])
-            print "</li>"
+            # print "<ul>"
+            # print "<li>"
+            # print "num_buckets: " + str(len(buckets))
+            # print "</li>"
+            # print "<li>"
+            # print "start_interval: " + str(start_interval)
+            # print "</li>"
+            # print "<li>"
+            # print "end_interval: " + str(end_interval)
+            # print "</li>"
+            # print "<li>"
+            # print "start_bucket: " + str(start_bucket)
+            # print "</li>"
+            # print "<li>"
+            # print "start_bucket-start_time: " + str(buckets[start_bucket].start_time)
+            # print "</li>"
+            # print "<li>"
+            # print "start_bucket-end_time: " +str(buckets[start_bucket].end_time)
+            # print "</li>"
+            # print "<li>"
+            # print "end_bucket: " + str(end_bucket)
+            # print "</li>"
+            # print "<li>"
+            # print "end_bucket-start_time: " + str(buckets[end_bucket].start_time)
+            # print "</li>"
+            # print "<li>"
+            # print "end_bucket-end_time: " +str(buckets[end_bucket].end_time)
+            # print "</li>"
+            # print "<li>"
+            # print "key: " + str(row[3])
+            # print "</li>"
+            # print "<li>"
+            # print "value: " + str(row[4])
+            # print "</li>"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
 
-            print "<ul>"
+            # print "<ul>"
             if(start_bucket == end_bucket):
 
-                print "<li>"
-                print ":s=e"
-                print "</li>"
                 #if they're in the same bucket we can just increment
                 incrementBucket(buckets, value, start_bucket, key)
 
             elif end_bucket - start_bucket == 1:
 
-                print "<li>"
-                print ":s=e+1"
-                print "</li>"
                 totalSeconds = float((end_interval - start_interval).seconds)
-                print "<li>"
-                print "totalSeconds ok"
-                print "</li>"
+
                 percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
-                print "<li>"
-                print "percentageStart ok = " + str(percentageStart)
-                print "</li>"
+
 
                 percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
-                print "<li>"
-                print "percentageEnd ok"
-                print "</li>"
+
 
                 incrementBucket(buckets, value*percentageStart, start_bucket, key)
-                print "<li>"
-                print "inc1 ok"
-                print "</li>"
+
 
                 incrementBucket(buckets, value*percentageEnd, end_bucket, key)
-                print "<li>"
-                print "inc2 ok"
-                print "</li>"
 
             else:
-                print "<li>"
-                print":s>>e"
-                print "</li>"
+
 
                 totalSeconds = (end_interval - start_interval).seconds
                 startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
@@ -324,10 +302,8 @@ def getBuckets(start_time, end_time, uid, db):
 
                 for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
-            print "</ul>"
-            print "</ul>"
+
         elif row[3] == 'max':
-            print "MAX"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -355,7 +331,6 @@ def getBuckets(start_time, end_time, uid, db):
                         buckets[i].hr_max = max(buckets[i].hr_max, value)
 
         elif row[3] == 'min':
-            print "MIN"
             # Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -383,7 +358,6 @@ def getBuckets(start_time, end_time, uid, db):
                         insertMin(buckets, value, i)
 
         elif row[3] == 'average':
-            print "AVG"
 
             # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
             # TODO - consider case that nothing is there
