@@ -241,26 +241,42 @@ def getBuckets(start_time, end_time, uid, db):
             print "<li>"
             print "end_bucket: " + str(end_bucket)
             print "</li>"
-            print "</ul>"
+            print "<li>"
+            print "key: " + str(row[3])
+            print "</li>"
+            print "<li>"
+            print "value: " + str(row[4])
+            print "</li>"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
 
+            print "<ul>"
             if(start_bucket == end_bucket):
+
+                print "<li>"
                 print ":s=e"
+                print "</li>"
                 #if they're in the same bucket we can just increment
                 incrementBucket(buckets, value, start_bucket, key)
 
             elif end_bucket - start_bucket == 1:
+
+                print "<li>"
                 print ":s=e+1"
+                print "</li>"
                 totalSeconds = float((end_interval - start_interval).seconds)
                 percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
                 percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
-
+                print "<li>"
+                print "precentages ok"
+                print "</li>"
                 incrementBucket(buckets, value*percentageStart, start_bucket, key)
                 incrementBucket(buckets, value*percentageEnd, end_bucket, key)
             else:
-                ":s>>e"
+                print "<li>"
+                print":s>>e"
+                print "</li>"
 
                 totalSeconds = (end_interval - start_interval).seconds
                 startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
@@ -277,7 +293,8 @@ def getBuckets(start_time, end_time, uid, db):
 
                 for i in range(start_bucket+1, end_bucket): #Exclude start and end indeces
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
-
+            print "</ul>"
+            print "</ul>"
         elif row[3] == 'max':
             print "MAX"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
