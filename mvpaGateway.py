@@ -102,7 +102,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
         if form.has_key("db"):
             db = form.getvalue("db")
         else:
-            db = 'test_fit'
+            db = 'fit_study'
 
         if form.has_key("end_time"):
             end_time_key = form.getvalue("end_time")

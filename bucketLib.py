@@ -196,7 +196,6 @@ def getBuckets(start_time, end_time, uid, db):
 
     #todo get uid
     sql_query = "select distinct * from "+db+" where uid = '"+ uid+"';"
-    print sql_query
     cur.execute(sql_query)
     rows = cur.fetchall()
 
