@@ -215,7 +215,7 @@ def getBuckets(start_time, end_time, uid, db):
     i = -1
     for row in rows:
         i = i+1
-        print '\n'
+        print '              '
         print i
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
@@ -234,10 +234,12 @@ def getBuckets(start_time, end_time, uid, db):
             value = row[4]
 
             if(start_bucket == end_bucket):
+                print ":s=e"
                 #if they're in the same bucket we can just increment
                 incrementBucket(buckets, value, start_bucket, key)
 
             elif end_bucket - start_bucket == 1:
+                print ":s=e+1"
                 totalSeconds = float((end_interval - start_interval).seconds)
                 percentageStart = float((buckets[start_bucket].end_time - start_interval).seconds)/ totalSeconds
                 percentageEnd = float((end_interval - buckets[end_bucket].start_time).seconds)/ totalSeconds
@@ -245,7 +247,7 @@ def getBuckets(start_time, end_time, uid, db):
                 incrementBucket(buckets, value*percentageStart, start_bucket, key)
                 incrementBucket(buckets, value*percentageEnd, end_bucket, key)
             else:
-
+                ":s>>e"
 
                 totalSeconds = (end_interval - start_interval).seconds
                 startSeconds = (buckets[start_bucket].end_time - start_interval).seconds
