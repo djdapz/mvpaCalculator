@@ -239,7 +239,19 @@ def getBuckets(start_time, end_time, uid, db):
             print "start_bucket: " + str(start_bucket)
             print "</li>"
             print "<li>"
+            print "start_bucket-start_time: " + str(buckets[start_bucket].start_time)
+            print "</li>"
+            print "<li>"
+            print "start_bucket-end_time: " +str(buckets[start_bucket].end_time)
+            print "</li>"
+            print "<li>"
             print "end_bucket: " + str(end_bucket)
+            print "</li>"
+            print "<li>"
+            print "end_bucket-start_time: " + str(buckets[end_bucket].start_time)
+            print "</li>"
+            print "<li>"
+            print "end_bucket-end_time: " +str(buckets[end_bucket].end_time)
             print "</li>"
             print "<li>"
             print "key: " + str(row[3])
