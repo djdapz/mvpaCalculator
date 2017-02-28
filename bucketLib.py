@@ -228,7 +228,20 @@ def getBuckets(start_time, end_time, uid, db):
 
         #handle calories
         if row[3] == 'calories' or row[3] =='steps':
-            print "CAL OR STEP"
+            print "<ul>"
+            print "<li>"
+            print "start_interval: " + str(start_interval)
+            print "</li>"
+            print "<li>"
+            print "end_interval: " + str(end_interval)
+            print "</li>"
+            print "<li>"
+            print "start_bucket: " + str(start_bucket)
+            print "</li>"
+            print "<li>"
+            print "end_bucket: " + str(end_bucket)
+            print "</li>"
+            print "</ul>"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
