@@ -119,17 +119,13 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
             start_time = start_time - days_ago
             end_time = end_time - days_ago
-        print "also here"
 
         try:
 
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid, db)
-            print "bucketed"
             bucketLib.buildOutMissingValues(buckets)
-            print "built out"
             bucketLib.labelBuckets(buckets)
-            print "labeled"
             interval = buckets[0].getInterval()
 
 
