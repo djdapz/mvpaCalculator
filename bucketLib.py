@@ -215,6 +215,7 @@ def getBuckets(start_time, end_time, uid, db):
     i = -1
     for row in rows:
         i = i+1
+        print '\n'
         print i
         #map to row
         start_interval = datetime.strptime(row[1], '%I:%M:%S %p %b %d, %Y')
@@ -227,6 +228,7 @@ def getBuckets(start_time, end_time, uid, db):
 
         #handle calories
         if row[3] == 'calories' or row[3] =='steps':
+            print "CAL OR STEP"
             # for steps and calories it makes sense to map percentages of the attribute to each bucket
             key = row[3]
             value = row[4]
@@ -262,6 +264,7 @@ def getBuckets(start_time, end_time, uid, db):
                     incrementBucket(buckets, value * middleBuckets / totalSeconds, i, key)
 
         elif row[3] == 'max':
+            print "MAX"
             #Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -289,7 +292,7 @@ def getBuckets(start_time, end_time, uid, db):
                         buckets[i].hr_max = max(buckets[i].hr_max, value)
 
         elif row[3] == 'min':
-
+            print "MIN"
             # Max from an interval will become the maximum for any bucket that it is at least HALF in
             #TODO - consider case that nothing is there
             key = row[3]
@@ -317,6 +320,7 @@ def getBuckets(start_time, end_time, uid, db):
                         insertMin(buckets, value, i)
 
         elif row[3] == 'average':
+            print "AVG"
 
             # Average from an interval will become the average for any bucket that it is fully part, average of a bucket that it is touching, or the full average of a bucket that has no average
             # TODO - consider case that nothing is there
