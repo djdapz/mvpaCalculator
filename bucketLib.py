@@ -230,6 +230,9 @@ def getBuckets(start_time, end_time, uid, db):
         if row[3] == 'calories' or row[3] =='steps':
             print "<ul>"
             print "<li>"
+            print "num_buckets: " + str(len(buckets))
+            print "</li>"
+            print "<li>"
             print "start_interval: " + str(start_interval)
             print "</li>"
             print "<li>"
