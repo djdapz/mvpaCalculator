@@ -75,7 +75,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
                 print "<tr><th>QUERY KEY</th><th>REQUIRED</th><th>DEFAULT VALUE</th><th>DETAILS</th></tr>"
                 print "<tr><td>uid</td><td>YES</td><td>'Fahad'</td><td>unique username for query</td></tr>"
-                print "<tr><td>db</td><td>NO</td><td>test-db</td><td>databas user's data is stored in</td></tr>"
+                print "<tr><td>db</td><td>NO</td><td>fit_study</td><td>databas user's data is stored in</td></tr>"
                 print "<tr><td>mode</td><td>YES</td><td>table</td><td><ul><li>mode = 'csv'--> returns csv like data</li><li>model='table'--> Returns HTML Table</li><li>model='api' --> enteres api mode and returns JSON. use request field to specify what you want</li></td></tr>"
                 print "<tr><td>request</td><td>IF MODE = API</td><td>None</td><td><ul><li>request = 'mvpa'--> json with 'mvpa' field</li><li>reuqest='buckets'--> json of all buckets</li></td></tr>"
                 print "<tr><td>post</td><td>no</td><td>False</td><td>Set to True or true if you want the query to post to the goals-achieved table</td></tr>"

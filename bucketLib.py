@@ -115,14 +115,12 @@ class Bucket:
 
 def labelBuckets(buckets):
     interval = buckets[0].getInterval()
-    steps_per_minute_threshold = 85
+    steps_per_minute_threshold = 90
     steps_threshold = interval * steps_per_minute_threshold
     base_calories_per_minute = 6.08333/5
     calories_threshold = interval * base_calories_per_minute * 5
     hr_threshold = 100
     for bucket in buckets:
-        # when we have betas do the regression p = alpha + B1*x1 ...
-        # if p > .5 ==> true
         if bucket.steps > steps_threshold:
             bucket.mvpa_guess = True
         elif bucket.calories > calories_threshold:
@@ -135,7 +133,7 @@ def labelBuckets(buckets):
 def buildOutMissingValues(buckets):
     base_calories_per_minute = 6.08333 / 5
     interval = buckets[0].getInterval()
-    resting_heart_rate = 55
+    resting_heart_rate = 65
 
     last_max = 0
     last_min = 0
