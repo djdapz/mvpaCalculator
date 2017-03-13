@@ -106,7 +106,8 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             db = 'fit_study'
 
         if form.has_key("scale"):
-            scale = float(form.getvalue("scale"))
+            scale = form.getvalue("scale")
+            scale = int(scale)
         else:
             scale = 1
 
