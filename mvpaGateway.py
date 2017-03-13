@@ -82,7 +82,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>goal</td><td>IF post=True</td><td>undefined</td><td>User's goal for the day</td></tr>"
                 print "<tr><td>special_dates</td><td>no</td><td>None</td><td>non-default date settings - use 'original_testing' to pull table from first testing period</td></tr>"
                 print "<tr><td>start_time</td><td>no</td><td>Current Day at 7AM</td><td>override default start time. format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
-                print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
+                print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '12'-12AM midnight, '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
@@ -106,8 +106,12 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key("end_time"):
             end_time_key = form.getvalue("end_time")
+
+
             if end_time_key == "10":
                 end_time = datetime(now.year, now.month, now.day, 22, 0, 0)
+            elif end_time_key == "12":
+                end_time = datetime(now.year, now.month, now.day + 1, 0, 0, 0)
             elif end_time_key == "now":
                 end_time = now
             else:
