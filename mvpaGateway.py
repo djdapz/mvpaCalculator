@@ -84,6 +84,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
                 print "<tr><td>start_time</td><td>no</td><td>Current Day at 7AM</td><td>override default start time. format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
                 print "<tr><td>end_time</td><td>no</td><td>Current Day at 10PM</td><td>override default end time. Special values: '12'-12AM midnight, '10'-10PM today, 'now'-current time or manual: format 'hour:minute:second AM/PM Month(Feb) day, year(4digit)'</td></tr>"
                 print "<tr><td>days_ago</td><td>no</td><td>0</td><td>Single number requesting data from x day's ago</td></tr>"
+                print "<tr><td>scale</td><td>no</td><td>1</td><td>how much to divide everything by before calculating mvpa, incase data was uploaded multiple time</td></tr>"
                 print "<tr><td>help</td><td>no</td><td>false</td><td>if help='true' or 'True' this table is included in query</td></tr>"
                 print "</table>"
 
@@ -103,6 +104,12 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             db = form.getvalue("db")
         else:
             db = 'fit_study'
+
+        if form.has_key("scale"):
+            scale = form.getvalue("scale")
+        else:
+            scale = 1
+
 
         if form.has_key("end_time"):
             end_time_key = form.getvalue("end_time")
@@ -129,7 +136,9 @@ if os.environ['REQUEST_METHOD'] == 'GET':
             # FOR TESTING AND DEMO DATA ONLY REMOVE WHEN LIV
             buckets = bucketLib.getBuckets(start_time, end_time, uid, db)
             bucketLib.buildOutMissingValues(buckets)
+            bucketLib.scaleBuckets(buckets, scale)
             bucketLib.labelBuckets(buckets)
+
             interval = buckets[0].getInterval()
 
 

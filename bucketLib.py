@@ -111,7 +111,10 @@ class Bucket:
             print "MODE UNKNOWN - HEADER"
 
 
-
+def scaleBuckets(buckets, scale):
+    for bucket in buckets:
+        bucket.calories = bucket.calories / scale
+        bucket.steps = bucket.steps / scale
 
 def labelBuckets(buckets):
     interval = buckets[0].getInterval()
