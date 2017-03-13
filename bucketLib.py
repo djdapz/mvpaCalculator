@@ -114,6 +114,7 @@ class Bucket:
 def scaleBuckets(buckets, scale):
     print 'here'
     for bucket in buckets:
+        print 'here'
         bucket.calories = bucket.calories / scale
         bucket.steps = bucket.steps / scale
 
