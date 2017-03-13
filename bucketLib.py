@@ -116,7 +116,9 @@ def scaleBuckets(buckets, scale):
         if bucket.calories:
             print "cals"
             x = bucket.calories
+            print "cals2"
             bucket.calories = x / scale
+            print "cals3"
         if bucket.steps:
             print "steps"
             x = bucket.steps
