@@ -112,11 +112,11 @@ class Bucket:
 
 
 def scaleBuckets(buckets, scale):
-    print 'here'
     for bucket in buckets:
-        print 'here'
-        bucket.calories = bucket.calories / scale
-        bucket.steps = bucket.steps / scale
+        if bucket.calories:
+            bucket.calories = bucket.calories / scale
+        if bucket.steps:
+            bucket.steps = bucket.steps / scale
 
 def labelBuckets(buckets):
     interval = buckets[0].getInterval()
