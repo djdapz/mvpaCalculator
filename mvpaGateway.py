@@ -107,7 +107,7 @@ if os.environ['REQUEST_METHOD'] == 'GET':
 
         if form.has_key("scale"):
             scale = form.getvalue("scale")
-            scale = int(scale)
+            scale = float(scale)
         else:
             scale = 1
 
